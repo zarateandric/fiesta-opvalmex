@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fiesta de Fin de Año 2026 · Operadora VALMEX</title>
+<meta name="description" content="Fiesta de fin de año de Operadora VALMEX: dinámicas, termo personalizado y ruleta del amigo secreto.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e13;--surface:#121922;--surface2:#18212c;--line:#243040;--text:#e9eff6;--muted:#94a3b5;--accent:#7dffb3;--accent2:#ffb04a;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Space Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55;overflow-x:hidden;
+background-image:radial-gradient(1px 1px at 12% 18%,#fff6 50%,transparent 51%),radial-gradient(1px 1px at 78% 8%,#fff5 50%,transparent 51%),radial-gradient(1.5px 1.5px at 40% 34%,#fff4 50%,transparent 51%),radial-gradient(1px 1px at 90% 42%,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 22% 62%,#fff4 50%,transparent 51%)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h1,h2,h3{line-height:1.12;margin:0 0 12px}
+h2{font-size:clamp(1.6rem,4vw,2.3rem)}
+.eyebrow{color:var(--accent);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.muted{color:var(--muted)}
+nav{position:sticky;top:0;z-index:20;background:#0a0e13d9;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav b{font-size:.95rem;letter-spacing:.04em}
+nav a{color:var(--muted);text-decoration:none;font-size:.9rem;margin-left:20px}
+nav a:hover{color:var(--accent)}
+nav a.pill{color:#04140b;background:var(--accent);padding:7px 16px;border-radius:999px;font-weight:700}
+@media(max-width:640px){nav a:not(.pill){display:none}}
+.hero{padding:56px 0 48px;background:radial-gradient(60% 60% at 50% 0%,#7dffb31f,transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr;text-align:center}.hero .cta{justify-content:center}}
+.hero h1{font-size:clamp(2.2rem,6.4vw,3.9rem);font-weight:700;letter-spacing:-.02em}
+.hero h1 span{color:var(--accent)}
+.lead{color:var(--muted);font-size:1.08rem;max-width:540px}
+@media(max-width:820px){.lead{margin:0 auto 24px}}
+.ufo{font-size:2.6rem;display:inline-block;animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-block;background:var(--accent);color:#04140b;border:0;border-radius:999px;padding:13px 26px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;transition:transform .15s,opacity .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;transition:transform .2s,border-color .2s}
+.dyn:hover{transform:translateY(-4px);border-color:#7dffb366}
+.card .k{color:var(--muted);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase}
+.card .v{font-size:1.2rem;font-weight:600;margin-top:4px}
+.card .ico{font-size:1.8rem;margin-bottom:8px}
+.card h3{font-size:1.15rem}
+.card p{margin:0;color:var(--muted);font-size:.96rem}
+.tag{float:right;font-size:.72rem;color:var(--accent);border:1px solid #7dffb344;border-radius:999px;padding:2px 10px}
+/* cuenta regresiva */
+.count{border-color:#7dffb344;background:linear-gradient(180deg,var(--surface2),var(--surface));text-align:center;box-shadow:0 0 60px #7dffb314}
+.count h3{font-size:1.05rem;margin-bottom:4px}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0 4px}
+.cd div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px 4px}
+.cd b{display:block;font-size:clamp(1.5rem,5vw,2rem);color:var(--accent);font-variant-numeric:tabular-nums}
+.cd small{color:var(--muted);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.steps{counter-reset:s;display:grid;gap:12px;margin-top:20px}
+.step{display:flex;gap:14px;align-items:flex-start;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.step::before{counter-increment:s;content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#04140b;font-weight:700;display:grid;place-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{border:1px solid var(--line);background:var(--surface2);border-radius:999px;padding:6px 14px;font-size:.9rem}
+.chip.no{border-color:#ff6b6b66;color:#ff9b9b}
+/* ruleta */
+.roulette{background:linear-gradient(180deg,var(--surface),var(--bg));border:1px solid var(--line);border-radius:26px;padding:28px 20px;text-align:center}
+.picker{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;margin:18px 0}
+select{background:var(--surface2);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;min-width:240px}
+.snd{font-size:.88rem;color:var(--muted);cursor:pointer;display:flex;gap:6px;align-items:center}
+.wheelbox{position:relative;width:min(92vw,440px);aspect-ratio:1;margin:14px auto}
+.wheelbox canvas{width:100%;height:100%;display:block;border-radius:50%;box-shadow:0 0 50px #7dffb326}
+.pointer{position:absolute;top:-10px;left:50%;transform:translateX(-50%);border-left:14px solid transparent;border-right:14px solid transparent;border-top:30px solid var(--accent2);filter:drop-shadow(0 2px 6px #0009);z-index:2}
+#girar{position:absolute;inset:0;margin:auto;width:92px;height:92px;border-radius:50%;border:4px solid var(--bg);background:linear-gradient(135deg,#b6ffd3,var(--accent));color:#04140b;font:700 .95rem inherit;font-family:inherit;cursor:pointer;z-index:2;box-shadow:0 0 24px #7dffb399;transition:transform .15s}
+#girar:hover:not(:disabled){transform:scale(1.06)}
+#girar:disabled{filter:grayscale(.7);opacity:.7;cursor:not-allowed}
+.result{margin-top:20px}
+.hide{display:none}
+.reveal{display:inline-block;max-width:460px;background:var(--surface2);border:1px solid var(--accent);border-radius:18px;padding:20px 26px;animation:pop .5s}
+.reveal small{display:block;color:var(--muted)}
+.reveal strong{display:block;font-size:2.1rem;color:var(--accent);margin:4px 0 10px}
+.tip{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:left;font-size:.9rem;color:#cbd6e3}
+.tip b{color:var(--accent2);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:2px}
+@keyframes pop{from{transform:scale(.7);opacity:0}}
+.note{font-size:.85rem;color:var(--muted);max-width:520px;margin:16px auto 0}
+footer{padding:36px 0 52px;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap"><b>🛸 VALMEX · Fin de año 2026</b><div><a href="#plan">Evento</a><a href="#dinamicas">Dinámicas</a><a href="#termo">Termo</a><a class="pill" href="#ruleta">Mi amigo secreto</a></div></div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="ufo">🛸</div>
+      <div class="eyebrow">Operadora VALMEX · Convivencia anual</div>
+      <h1>Una noche <span>fuera de este mundo</span></h1>
+      <p class="lead">Dejamos los AUMs y los portafolios en pausa para cenar tacos, jugar y cerrar el año juntos. Aquí está todo lo que necesitas, incluido quién es tu amigo secreto.</p>
+      <div class="cta"><a class="btn" href="#ruleta">Descubrir mi amigo secreto</a><a class="btn ghost" href="#dinamicas">Ver dinámicas</a></div>
+    </div>
+    <div class="card count">
+      <div class="eyebrow">Cuenta regresiva</div>
+      <h3 id="cdTitle">Faltan para la fiesta</h3>
+      <div class="cd"><div><b id="cd-d">00</b><small>Días</small></div><div><b id="cd-h">00</b><small>Horas</small></div><div><b id="cd-m">00</b><small>Min</small></div><div><b id="cd-s">00</b><small>Seg</small></div></div>
+      <p class="muted" style="margin:10px 0 0;font-size:.9rem" id="cdSub"></p>
+    </div>
+  </div>
+</header>
+
+<section id="plan">
+  <div class="wrap">
+    <div class="eyebrow">El plan</div>
+    <h2>Detalles del evento</h2>
+    <div class="grid g3" id="detalles" style="margin-top:20px"></div>
+  </div>
+</section>
+
+<section id="dinamicas">
+  <div class="wrap">
+    <div class="eyebrow">Programa</div>
+    <h2>Lo que vamos a jugar</h2>
+    <div class="grid g2" style="margin-top:20px">
+      <div class="card dyn"><span class="tag">1 · El regalo</span><div class="ico">🥤</div><h3>Intercambio de termos</h3><p>Cada quien personaliza un termo para su amigo secreto, inspirado en su personalidad, hobbies o frases de oficina.</p></div>
+      <div class="card dyn"><span class="tag">2 · Equipos</span><div class="ico">📊</div><h3>“100 mexicanos dijeron”</h3><p>El grupo se divide en dos equipos y compite en rondas rápidas por adivinar lo que responde la mayoría.</p></div>
+      <div class="card dyn"><span class="tag">3 · Contrarreloj</span><div class="ico">✏️</div><h3>Dibuja y adivina</h3><p>Un integrante por equipo saca una tarjeta y dibuja. Su equipo tiene que adivinar antes que el rival.</p></div>
+      <div class="card dyn"><span class="tag">4 · Gran cierre</span><div class="ico">🏆</div><h3>VALMEX Awards</h3><p>Premiación con categorías divertidas y sanas para reconocer lo mejor del año.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="termo">
+  <div class="wrap">
+    <div class="eyebrow">Intercambio</div>
+    <h2>Cómo funciona el termo personalizado</h2>
+    <p class="muted">Tu regalo depende de a quién te toque.</p>
+    <div class="steps">
+      <div class="step"><div><strong>Gira la ruleta.</strong><br><span class="muted">Descubre a quién le regalas. Es secreto, no se lo cuentes a nadie.</span></div></div>
+      <div class="step"><div><strong>Personaliza el termo.</strong><br><span class="muted">Grabado, vinil o stickers resistentes al agua con algo que lo caracterice: su color, su frase o su hobby.</span></div></div>
+      <div class="step"><div><strong>Llévalo envuelto.</strong><br><span class="muted">El día de la fiesta se entregan los termos y se revela quién es quién.</span></div></div>
+    </div>
+    <div class="chips" id="reglas"></div>
+  </div>
+</section>
+
+<section id="ruleta">
+  <div class="wrap">
+    <div class="eyebrow">Amigo secreto</div>
+    <h2>La ruleta cósmica</h2>
+    <div class="roulette">
+      <p class="muted" style="margin:0">Elige tu nombre, presiona <b style="color:var(--accent)">GIRAR</b> y descubre a quién le regalas.</p>
+      <div class="picker">
+        <select id="quien" aria-label="Selecciona tu nombre"><option value="">Selecciona tu nombre</option></select>
+        <label class="snd"><input type="checkbox" id="snd" checked> 🔊 Sonido</label>
+      </div>
+      <div class="wheelbox"><div class="pointer"></div><canvas id="wheel"></canvas><button id="girar" disabled>GIRAR</button></div>
+      <div class="result hide" id="resultado" aria-live="polite">
+        <div class="reveal">
+          <small id="saludo">Tu amigo secreto es</small>
+          <strong id="ganador">Nombre</strong>
+          <div class="tip"><b>💡 Tip para su termo</b><span id="tip"></span></div>
+          <button class="btn ghost" id="ocultar" style="margin-top:14px">🙈 Ocultar</button>
+        </div>
+      </div>
+      <p class="note">Tu resultado es siempre el mismo, aunque vuelvas a girar o entres desde otro dispositivo. Elige solo tu nombre para no arruinar la sorpresa de nadie.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">VALMEX Awards</div>
+    <h2>Categorías que se vienen</h2>
+    <p class="muted">Algunos adelantos. El resto, sorpresa.</p>
+    <div class="chips" id="premios"></div>
+  </div>
+</section>
+
+<footer><div class="wrap" id="pie"></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+/* ===== CONFIGURACIÓN: edita aquí ===== */
+var CONFIG={
+  lugar:"Taquería Ovnis, Polanco, CDMX",
+  fechaTxt:"Viernes 27 de noviembre de 2026",
+  horaTxt:"19:00 hrs",
+  fechaISO:"2026-11-27T19:00:00-06:00",
+  vestimenta:"Casual y cómoda",
+  semilla:"valmex-fin-de-anio-2026"
+};
+var PARTICIPANTES=["Bob","Kim","Andric","Valeria","Carlos","Fernanda","Rodrigo","Mariana"]; /* EJEMPLO: reemplaza por los nombres reales */
+var REGLAS=["Presupuesto: por confirmar","Entrega: el día de la fiesta","Todo con buena onda"];
+var PREMIOS=["Mejor Excel del año","El/la más puntual","Rey/Reina del café","Alma de la fiesta","Mejor compañero/a de equipo","Sonrisa del año"];
+var TIPS=["Averigua si toma café o té y elige un termo con tapa antiderrame.","Grábale su nombre o apodo junto a un ícono de su hobby favorito.","Busca una frase que siempre diga en la oficina y ponla en vinil.","Stickers resistentes al agua de sus series, bandas o equipos favoritos le dan un toque auténtico.","Su inicial en tipografía elegante lo vuelve su compañero inseparable en las juntas."];
+/* ===================================== */
+function $(i){return document.getElementById(i);}
+
+/* Detalles, chips y pie */
+[["📅","Fecha",CONFIG.fechaTxt],["🕒","Hora",CONFIG.horaTxt],["📍","Lugar",CONFIG.lugar],["👕","Vestimenta",CONFIG.vestimenta]].forEach(function(x){
+  $("detalles").insertAdjacentHTML("beforeend",'<div class="card"><div class="ico">'+x[0]+'</div><div class="k">'+x[1]+'</div><div class="v">'+x[2]+'</div></div>');});
+REGLAS.forEach(function(t){$("reglas").insertAdjacentHTML("beforeend",'<span class="chip">'+t+'</span>');});
+$("reglas").insertAdjacentHTML("beforeend",'<span class="chip no">🚫 Tazas y calcetines, vetados</span>');
+PREMIOS.forEach(function(t){$("premios").insertAdjacentHTML("beforeend",'<span class="chip">🏅 '+t+'</span>');});
+$("pie").innerHTML="Operadora VALMEX · Área Comercial · "+CONFIG.fechaTxt+" · "+CONFIG.lugar;
+$("cdSub").textContent=CONFIG.fechaTxt+" · "+CONFIG.horaTxt;
+
+/* Cuenta regresiva */
+var EVENT=new Date(CONFIG.fechaISO).getTime();
+function cuenta(){
+  var d=EVENT-Date.now();
+  if(d<=0){d=0;$("cdTitle").textContent="¡La fiesta ya comenzó!";}
+  var v=[Math.floor(d/864e5),Math.floor(d%864e5/36e5),Math.floor(d%36e5/6e4),Math.floor(d%6e4/1e3)];
+  ["d","h","m","s"].forEach(function(k,i){$("cd-"+k).textContent=String(v[i]).padStart(2,"0");});
+}
+cuenta();setInterval(cuenta,1000);
+
+/* Asignación fija: mezcla con semilla y forma un ciclo. Nadie se toca a sí mismo y todos reciben exactamente un regalo. */
+function hash(s){var h=1779033703^s.length;for(var i=0;i<s.length;i++){h=Math.imul(h^s.charCodeAt(i),3432918353);h=h<<13|h>>>19;}return h>>>0;}
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+var names=PARTICIPANTES.slice(),r=rng(hash(CONFIG.semilla)),order=names.slice(),assign={};
+for(var i=order.length-1;i>0;i--){var j=Math.floor(r()*(i+1)),t=order[i];order[i]=order[j];order[j]=t;}
+order.forEach(function(n,i){assign[n]=order[(i+1)%order.length];});
+
+/* Sonido (Web Audio, sin librerías) */
+var AC;
+function beep(f,d){
+  if(!$("snd").checked)return;
+  try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();
+    var o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f;g.gain.value=.05;
+    o.connect(g);g.connect(AC.destination);o.start();g.gain.exponentialRampToValueAtTime(.0001,AC.currentTime+d);o.stop(AC.currentTime+d);}catch(e){}
+}
+
+/* Ruleta */
+var sel=$("quien"),btn=$("girar"),res=$("resultado"),cv=$("wheel"),ctx=cv.getContext("2d"),rot=0,spinning=false;
+var COLORS=["#16303a","#1d3f3a","#2a2f45","#233a2e"],TAU=2*Math.PI;
+names.slice().sort(function(a,b){return a.localeCompare(b,"es");}).forEach(function(n){sel.insertAdjacentHTML("beforeend","<option>"+n+"</option>");});
+function cands(){return names.filter(function(n){return n!==sel.value;});}
+function mod(x){return((x%TAU)+TAU)%TAU;}
+function draw(){
+  var dpr=window.devicePixelRatio||1,S=cv.getBoundingClientRect().width;if(!S)return;
+  cv.width=cv.height=S*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  var c=S/2,R=c-10,list=cands(),N=list.length,arc=TAU/N;
+  ctx.beginPath();ctx.arc(c,c,R+6,0,TAU);ctx.fillStyle="#7dffb3";ctx.fill();
+  list.forEach(function(n,i){
+    var a=rot+i*arc;
+    ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,R,a,a+arc);ctx.closePath();
+    ctx.fillStyle=COLORS[i%4];ctx.fill();ctx.lineWidth=2;ctx.strokeStyle="#0a0e13";ctx.stroke();
+    ctx.save();ctx.translate(c,c);ctx.rotate(a+arc/2);ctx.textAlign="right";ctx.textBaseline="middle";
+    ctx.fillStyle="#e9eff6";ctx.font="700 "+(N>14?12:N>9?14:16)+"px 'Space Grotesk',system-ui,sans-serif";ctx.fillText(n,R-20,0);ctx.restore();
+  });
+}
+sel.addEventListener("change",function(){btn.disabled=!sel.value||spinning;res.classList.add("hide");draw();});
+window.addEventListener("resize",draw);window.addEventListener("load",draw);draw();
+
+btn.addEventListener("click",function(){
+  if(spinning||!sel.value)return;
+  var list=cands(),N=list.length,arc=TAU/N,target=assign[sel.value],k=list.indexOf(target);
+  var want=1.5*Math.PI-k*arc-arc/2+(Math.random()-.5)*arc*.6,from=rot,to=from+12*Math.PI+mod(want-from);
+  spinning=true;btn.disabled=true;sel.disabled=true;res.classList.add("hide");
+  var t0=performance.now(),dur=4800,last=-1;
+  (function f(now){
+    var p=Math.min((now-t0)/dur,1),e=1-Math.pow(1-p,3);rot=from+(to-from)*e;draw();
+    var idx=Math.floor(mod(1.5*Math.PI-rot)/arc)%N;if(idx!==last){last=idx;beep(520,.04);}
+    if(p<1)requestAnimationFrame(f);else fin(target);
+  })(t0);
+});
+function fin(target){
+  spinning=false;btn.disabled=false;sel.disabled=false;
+  $("saludo").textContent="¡"+sel.value+", tu amigo secreto es:";
+  $("ganador").textContent=target;
+  $("tip").textContent=TIPS[Math.floor(Math.random()*TIPS.length)];
+  res.classList.remove("hide");
+  beep(660,.15);setTimeout(function(){beep(880,.3);},160);
+  if(typeof confetti==="function")confetti({particleCount:90,spread:75,origin:{y:.65},colors:["#7dffb3","#ffb04a","#ffffff","#2a2f45"]});
+}
+$("ocultar").addEventListener("click",function(){res.classList.add("hide");sel.value="";btn.disabled=true;draw();});
+</script>
+</body>
+</html>
