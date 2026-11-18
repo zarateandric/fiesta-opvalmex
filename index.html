@@ -3,109 +3,410 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Intercambio de Termos · Fiesta de Fin de Año VALMEX 2026</title>
+<title>OVNI MISSION · Intercambio de Termos VALMEX 2026</title>
 <meta name="description" content="Invitación oficial al intercambio de termos personalizados de Operadora VALMEX. Descubre a tu amigo secreto en la ruleta.">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Favicon de OVNI en SVG -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2300ffa3'/%3E%3Cstop offset='100%25' stop-color='%2300c3ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='22,36 42,36 52,62 12,62' fill='%2300ffa3' opacity='0.28'/%3E%3Cpath d='M20 26a12 10 0 0 1 24 0Z' fill='%237df9ff'/%3E%3Cellipse cx='32' cy='28' rx='28' ry='9' fill='url(%23g)'/%3E%3Cellipse cx='32' cy='28' rx='28' ry='9' fill='none' stroke='%2305070d' stroke-width='2'/%3E%3Ccircle cx='16' cy='28' r='2.5' fill='%23ffb800'/%3E%3Ccircle cx='26' cy='31' r='2.5' fill='%23ff2a85'/%3E%3Ccircle cx='38' cy='31' r='2.5' fill='%23ffb800'/%3E%3Ccircle cx='48' cy='28' r='2.5' fill='%23ff2a85'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0e13;--surface:#121922;--surface2:#18212c;--line:#243040;--text:#e9eff6;--muted:#94a3b5;--accent:#7dffb3;--accent2:#ffb04a;color-scheme:dark}
+:root{
+  --bg:#04060b;
+  --surface:#0b101d;
+  --surface2:#11192c;
+  --line:#1f2c48;
+  --text:#f2f6ff;
+  --muted:#96a7c8;
+  --accent:#00ffa3;
+  --accent2:#ffb800;
+  --cyber:#00d4ff;
+  --magenta:#ff2a85;
+  color-scheme:dark;
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Space Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55;overflow-x:hidden;
-background-image:radial-gradient(1px 1px at 12% 18%,#fff6 50%,transparent 51%),radial-gradient(1px 1px at 78% 8%,#fff5 50%,transparent 51%),radial-gradient(1.5px 1.5px at 40% 34%,#fff4 50%,transparent 51%),radial-gradient(1px 1px at 90% 42%,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 22% 62%,#fff4 50%,transparent 51%)}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-section{padding:48px 0}
-h1,h2,h3{line-height:1.12;margin:0 0 12px}
-h2{font-size:clamp(1.5rem,3.8vw,2.1rem)}
-.eyebrow{color:var(--accent);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:10px}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Space Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.55;
+  overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 15% 15%,#00ffa318 0%,transparent 38%),
+    radial-gradient(circle at 85% 12%,#ff2a8518 0%,transparent 38%),
+    radial-gradient(circle at 50% 75%,#00d4ff14 0%,transparent 45%),
+    linear-gradient(to right,#ffffff05 1px,transparent 1px),
+    linear-gradient(to bottom,#ffffff05 1px,transparent 1px);
+  background-size:100% 100%,100% 100%,100% 100%,44px 44px,44px 44px;
+}
+
+/* Estrellas sutiles flotantes */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%,#fff9 50%,transparent 51%),
+    radial-gradient(1px 1px at 78% 8%,#00ffa3 50%,transparent 51%),
+    radial-gradient(2px 2px at 42% 32%,#fff7 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 88% 45%,#00d4ff 50%,transparent 51%),
+    radial-gradient(1px 1px at 22% 68%,#ff2a85 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 64% 82%,#fff8 50%,transparent 51%);
+}
+
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+section{padding:52px 0}
+h1,h2,h3{line-height:1.08;margin:0 0 12px}
+h1,h2{font-family:"Syne","Space Grotesk",sans-serif;letter-spacing:-.03em}
+h2{font-size:clamp(1.7rem,4.2vw,2.5rem)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  color:var(--accent);font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:12px
+}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
 .muted{color:var(--muted)}
 
+/* Cinta superior estilo transmisión intergaláctica */
+.ticker{
+  background:linear-gradient(90deg,var(--accent),var(--cyber),var(--magenta),var(--accent2),var(--accent));
+  background-size:300% 100%;
+  animation:gradientMove 12s linear infinite;
+  color:#030806;
+  font-weight:700;
+  font-size:.76rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  overflow:hidden;
+  white-space:nowrap;
+  padding:7px 0;
+  border-bottom:1px solid #ffffff33;
+}
+.ticker-track{
+  display:inline-block;
+  animation:marquee 24s linear infinite;
+}
+.ticker-track span{margin:0 24px}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes gradientMove{0%{background-position:0% 50%}100%{background-position:300% 50%}}
+
 /* Navegación */
-nav{position:sticky;top:0;z-index:20;background:#0a0e13d9;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-nav b{font-size:.95rem;letter-spacing:.04em}
-nav a{color:var(--muted);text-decoration:none;font-size:.9rem;margin-left:18px}
+nav{
+  position:sticky;top:0;z-index:30;
+  background:#04060bd9;backdrop-filter:blur(14px);
+  border-bottom:1px solid #00ffa329;
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{
+  display:flex;align-items:center;gap:10px;
+  font-family:"Syne",sans-serif;font-weight:800;font-size:1rem;letter-spacing:.02em;
+}
+.brand-dot{
+  width:10px;height:10px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 12px var(--accent),0 0 24px var(--accent);
+}
+nav a{color:var(--muted);text-decoration:none;font-size:.9rem;margin-left:20px;font-weight:600;transition:color .2s}
 nav a:hover{color:var(--accent)}
-nav a.pill{color:#04140b;background:var(--accent);padding:7px 16px;border-radius:999px;font-weight:700}
+nav a.pill{
+  color:#04120c;
+  background:linear-gradient(135deg,var(--accent),var(--cyber));
+  padding:9px 18px;border-radius:999px;font-weight:700;
+  box-shadow:0 0 22px #00ffa355;
+  transition:transform .15s,box-shadow .15s;
+}
+nav a.pill:hover{transform:translateY(-2px);box-shadow:0 0 32px #00ffa399;color:#04120c}
 @media(max-width:640px){nav a:not(.pill){display:none}}
 
 /* Hero / Invitación */
-.hero{padding:48px 0 36px;background:radial-gradient(65% 60% at 50% 0%,#7dffb322,transparent 70%)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
-@media(max-width:820px){.hero .wrap{grid-template-columns:1fr;text-align:center}.hero .cta{justify-content:center}.meta-pills{justify-content:center}}
-.hero h1{font-size:clamp(2.1rem,5.8vw,3.5rem);font-weight:700;letter-spacing:-.02em}
-.hero h1 span{color:var(--accent)}
-.lead{color:var(--muted);font-size:1.05rem;max-width:520px;margin-bottom:20px}
-@media(max-width:820px){.lead{margin:0 auto 20px}}
-.badge-row{display:inline-flex;align-items:center;gap:10px;background:var(--surface2);border:1px solid #7dffb344;padding:6px 14px;border-radius:999px;margin-bottom:16px;font-size:.82rem;color:var(--accent);font-weight:600}
-.ufo{font-size:1.3rem;display:inline-block;animation:float 3.5s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-4px)}}
-.meta-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.meta-pill{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:7px 12px;font-size:.84rem;color:#dce6f2}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.btn{display:inline-block;background:var(--accent);color:#04140b;border:0;border-radius:999px;padding:13px 26px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;transition:transform .15s,opacity .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
-.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.hero{padding:48px 0 40px;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.18fr .82fr;gap:36px;align-items:center}
+@media(max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero .cta,.meta-pills{justify-content:center}
+}
+.badge-row{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(90deg,#00ffa31a,#00d4ff1a);
+  border:1px solid #00ffa366;
+  padding:7px 16px;border-radius:999px;margin-bottom:18px;
+  font-size:.8rem;color:var(--accent);font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  box-shadow:0 0 24px #00ffa322;
+}
+.pulse{
+  width:8px;height:8px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 0 #00ffa3cc;animation:pulse 1.8s infinite;
+}
+@keyframes pulse{70%{box-shadow:0 0 0 10px #00ffa300}100%{box-shadow:0 0 0 0 #00ffa300}}
 
-/* Cuenta regresiva */
-.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}
-.count{border-color:#7dffb344;background:linear-gradient(180deg,var(--surface2),var(--surface));text-align:center;box-shadow:0 0 60px #7dffb314}
-.count h3{font-size:1.05rem;margin-bottom:4px}
-.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0 8px}
-.cd div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px 4px}
-.cd b{display:block;font-size:clamp(1.5rem,5vw,2rem);color:var(--accent);font-variant-numeric:tabular-nums}
-.cd small{color:var(--muted);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.hero h1{
+  font-size:clamp(2.35rem,6vw,4.1rem);
+  font-weight:800;
+  margin-bottom:16px;
+}
+.hero h1 span{
+  display:block;
+  background:linear-gradient(95deg,var(--accent) 0%,var(--cyber) 55%,var(--accent2) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 0 26px #00ffa338);
+}
+.lead{color:#b7c6e4;font-size:1.08rem;max-width:540px;margin-bottom:20px}
+@media(max-width:860px){.lead{margin:0 auto 20px}}
 
-/* Dinámica breve (3 pasos) */
-.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:18px}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;position:relative}
-.step-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-weight:700;font-size:1.02rem}
-.step-head::before{counter-increment:s;content:counter(s);flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#04140b;font-weight:700;font-size:.88rem;display:grid;place-items:center}
-.step p{margin:0;color:var(--muted);font-size:.92rem}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.chip{border:1px solid var(--line);background:var(--surface2);border-radius:999px;padding:6px 14px;font-size:.86rem}
-.chip.no{border-color:#ff6b6b66;color:#ff9b9b}
+.meta-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.meta-pill{
+  background:rgba(17,25,44,.82);
+  border:1px solid #2a3c63;
+  border-radius:12px;padding:8px 13px;font-size:.85rem;color:#e7f0ff;
+  backdrop-filter:blur(8px);
+  transition:border-color .2s,transform .2s;
+}
+.meta-pill:hover{border-color:var(--accent);transform:translateY(-2px)}
 
-/* Tarjeta de Invitación Personalizada + Ruleta */
-.roulette{background:linear-gradient(180deg,var(--surface),var(--bg));border:1px solid #7dffb333;border-radius:26px;padding:32px 20px;text-align:center;box-shadow:0 12px 50px #0006}
-.picker{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;margin:18px 0}
-select{background:var(--surface2);color:var(--text);border:1px solid var(--accent);border-radius:12px;padding:13px 16px;font:inherit;font-weight:600;min-width:260px;cursor:pointer}
-.snd{font-size:.88rem;color:var(--muted);cursor:pointer;display:flex;gap:6px;align-items:center}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--accent),var(--cyber));
+  color:#02120c;border:0;border-radius:999px;padding:14px 28px;
+  font:inherit;font-weight:700;cursor:pointer;text-decoration:none;
+  box-shadow:0 8px 30px #00ffa34d;
+  transition:transform .18s,box-shadow .18s,opacity .18s;
+}
+.btn:hover{transform:translateY(-3px) scale(1.01);box-shadow:0 12px 38px #00ffa380}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.btn.ghost{
+  background:rgba(17,25,44,.7);color:var(--text);
+  border:1px solid #2d4068;box-shadow:none;
+}
+.btn.ghost:hover{border-color:var(--accent);background:rgba(0,255,163,.08)}
 
-/* Pase personalizado */
-.invite-pass{max-width:540px;margin:0 auto 20px;background:linear-gradient(135deg,#16232e,#121922);border:1px dashed #7dffb366;border-radius:16px;padding:16px 20px;text-align:left;animation:fadeIn .35s ease}
-.invite-pass .pass-top{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px}
-.invite-pass h3{font-size:1.15rem;margin:0 0 4px}
-.invite-pass p{margin:0;font-size:.9rem;color:var(--muted)}
-@keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}}
+/* OVNI Ilustrado + Cuenta Regresiva */
+.ufo-stage{
+  position:relative;
+  padding-top:10px;
+}
+.ufo-wrap{
+  width:150px;margin:0 auto -18px;position:relative;z-index:3;
+  animation:ufoFloat 3.6s ease-in-out infinite;
+  filter:drop-shadow(0 10px 25px #00ffa355);
+}
+.ufo-beam{
+  width:210px;height:75px;margin:-6px auto -48px;
+  background:linear-gradient(180deg,#00ffa344 0%,#00d4ff14 60%,transparent 100%);
+  clip-path:polygon(28% 0%,72% 0%,100% 100%,0% 100%);
+  pointer-events:none;
+  animation:beamPulse 2.6s ease-in-out infinite;
+}
+@keyframes ufoFloat{50%{transform:translateY(-9px) rotate(1.5deg)}}
+@keyframes beamPulse{50%{opacity:.55}}
 
-.wheelbox{position:relative;width:min(90vw,420px);aspect-ratio:1;margin:16px auto}
-.wheelbox canvas{width:100%;height:100%;display:block;border-radius:50%;box-shadow:0 0 50px #7dffb326}
-.pointer{position:absolute;top:-10px;left:50%;transform:translateX(-50%);border-left:14px solid transparent;border-right:14px solid transparent;border-top:30px solid var(--accent2);filter:drop-shadow(0 2px 6px #0009);z-index:2}
-#girar{position:absolute;inset:0;margin:auto;width:92px;height:92px;border-radius:50%;border:4px solid var(--bg);background:linear-gradient(135deg,#b6ffd3,var(--accent));color:#04140b;font:700 .95rem inherit;font-family:inherit;cursor:pointer;z-index:2;box-shadow:0 0 24px #7dffb399;transition:transform .15s}
-#girar:hover:not(:disabled){transform:scale(1.06)}
-#girar:disabled{filter:grayscale(.7);opacity:.55;cursor:not-allowed}
-.result{margin-top:20px}
+.card{
+  background:linear-gradient(180deg,rgba(19,28,49,.92),rgba(10,15,28,.95));
+  border:1px solid var(--line);
+  border-radius:24px;padding:26px;
+  backdrop-filter:blur(12px);
+}
+.count{
+  position:relative;
+  border-color:#00ffa366;
+  text-align:center;
+  box-shadow:0 20px 70px #000a,0 0 50px #00ffa31f,inset 0 1px 0 #ffffff22;
+  overflow:hidden;
+}
+.count::after{
+  content:"";position:absolute;inset:-2px;border-radius:24px;padding:1px;
+  background:linear-gradient(135deg,#00ffa3,#00d4ff,transparent,#ff2a85);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+}
+.count h3{font-size:1.1rem;margin-bottom:4px;font-family:"Syne",sans-serif}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 10px}
+.cd div{
+  background:rgba(4,6,11,.85);
+  border:1px solid #223456;
+  border-radius:16px;padding:14px 4px;
+  box-shadow:inset 0 0 18px #00ffa30d;
+}
+.cd b{
+  display:block;font-size:clamp(1.6rem,5vw,2.2rem);
+  color:var(--accent);font-variant-numeric:tabular-nums;
+  text-shadow:0 0 18px #00ffa366;
+}
+.cd small{color:var(--muted);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+
+/* Dinámica breve (3 pasos con estilo holográfico) */
+.steps{
+  counter-reset:s;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;margin-top:22px;
+}
+.step{
+  background:linear-gradient(160deg,rgba(19,28,50,.9),rgba(10,14,25,.9));
+  border:1px solid #233354;
+  border-radius:20px;padding:22px;position:relative;overflow:hidden;
+  transition:transform .22s,border-color .22s,box-shadow .22s;
+}
+.step:hover{
+  transform:translateY(-5px);
+  border-color:var(--accent);
+  box-shadow:0 14px 36px #00ffa31a;
+}
+.step::after{
+  counter-increment:s;content:"0" counter(s);
+  position:absolute;top:10px;right:16px;
+  font-family:"Syne",sans-serif;font-size:2.4rem;font-weight:800;
+  color:#ffffff0a;pointer-events:none;
+}
+.step-ico{
+  width:44px;height:44px;border-radius:12px;
+  display:grid;place-items:center;font-size:1.35rem;
+  background:linear-gradient(135deg,#00ffa322,#00d4ff22);
+  border:1px solid #00ffa355;margin-bottom:14px;
+}
+.step-head{font-family:"Syne",sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:6px}
+.step p{margin:0;color:var(--muted);font-size:.94rem}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{
+  border:1px solid #273a60;
+  background:rgba(17,25,44,.85);
+  border-radius:999px;padding:8px 16px;font-size:.88rem;font-weight:600;
+}
+.chip.no{
+  border-color:#ff2a8588;background:rgba(255,42,133,.1);color:#ff8ab8;
+  box-shadow:0 0 20px #ff2a8522;
+}
+
+/* Sección de la Ruleta Cósmica */
+.roulette{
+  position:relative;
+  background:
+    radial-gradient(circle at 50% 35%,#00ffa318 0%,transparent 55%),
+    linear-gradient(180deg,rgba(17,25,44,.95),rgba(6,9,17,.98));
+  border:1px solid #00ffa355;
+  border-radius:30px;padding:38px 22px;text-align:center;
+  box-shadow:0 24px 80px #000c,0 0 60px #00ffa31a;
+  overflow:hidden;
+}
+.picker{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;margin:22px 0}
+select{
+  background:#0d1526;color:var(--text);
+  border:2px solid var(--accent);
+  border-radius:14px;padding:14px 18px;
+  font:inherit;font-weight:700;font-size:1rem;min-width:270px;cursor:pointer;
+  box-shadow:0 0 25px #00ffa333;
+  outline:none;
+}
+select:focus{box-shadow:0 0 35px #00ffa366}
+.snd{
+  font-size:.9rem;color:var(--muted);cursor:pointer;
+  display:flex;gap:8px;align-items:center;
+  background:#0d1526;border:1px solid #243659;padding:12px 16px;border-radius:14px;
+}
+
+/* Pase personalizado tipo Ticket Boarding Intergaláctico */
+.invite-pass{
+  max-width:560px;margin:0 auto 24px;
+  background:linear-gradient(135deg,#122238,#0d1526);
+  border:1px solid var(--accent);
+  border-left:5px solid var(--accent);
+  border-radius:18px;padding:18px 22px;text-align:left;
+  box-shadow:0 12px 35px #0008,0 0 25px #00ffa322;
+  animation:fadeIn .35s ease;
+}
+.invite-pass .pass-top{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:.74rem;color:var(--accent);text-transform:uppercase;letter-spacing:.15em;font-weight:700;margin-bottom:6px
+}
+.invite-pass h3{font-size:1.2rem;margin:0 0 4px;font-family:"Syne",sans-serif}
+.invite-pass p{margin:0;font-size:.92rem;color:#bfd0ee}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-8px)}}
+
+/* Contenedor de la Ruleta */
+.wheelbox{
+  position:relative;width:min(90vw,440px);aspect-ratio:1;margin:20px auto;
+  padding:12px;border-radius:50%;
+  background:radial-gradient(circle,#00ffa322 0%,transparent 70%);
+}
+.wheelbox::before{
+  content:"";position:absolute;inset:2px;border-radius:50%;
+  border:2px dashed #00ffa355;
+  animation:spinSlow 28s linear infinite;pointer-events:none;
+}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.wheelbox canvas{
+  width:100%;height:100%;display:block;border-radius:50%;
+  box-shadow:0 0 55px #00ffa340,0 0 90px #00d4ff20;
+}
+.pointer{
+  position:absolute;top:-4px;left:50%;transform:translateX(-50%);
+  border-left:16px solid transparent;border-right:16px solid transparent;border-top:34px solid var(--accent2);
+  filter:drop-shadow(0 4px 10px #ffb800aa);z-index:4;
+}
+#girar{
+  position:absolute;inset:0;margin:auto;width:98px;height:98px;border-radius:50%;
+  border:4px solid var(--bg);
+  background:radial-gradient(circle at 30% 30%,#ffffff,var(--accent) 45%,var(--cyber) 100%);
+  color:#02120b;font:800 1rem "Syne",sans-serif;letter-spacing:.06em;
+  cursor:pointer;z-index:3;
+  box-shadow:0 0 30px #00ffa3cc,0 0 60px #00ffa366;
+  transition:transform .18s,box-shadow .18s;
+}
+#girar:hover:not(:disabled){transform:scale(1.08);box-shadow:0 0 42px #00ffa3,0 0 80px #00d4ff}
+#girar:disabled{filter:grayscale(.8);opacity:.5;cursor:not-allowed;box-shadow:none}
+
+/* Revelación del Amigo Secreto */
+.result{margin-top:24px}
 .hide{display:none}
-.reveal{display:inline-block;max-width:460px;background:var(--surface2);border:1px solid var(--accent);border-radius:18px;padding:22px 26px;animation:pop .45s}
-.reveal small{display:block;color:var(--muted)}
-.reveal strong{display:block;font-size:2.1rem;color:var(--accent);margin:4px 0 12px}
-.tip{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:left;font-size:.9rem;color:#cbd6e3}
-.tip b{color:var(--accent2);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:2px}
+.reveal{
+  display:inline-block;max-width:480px;width:100%;
+  background:linear-gradient(160deg,#132238,#0b1220);
+  border:2px solid var(--accent);
+  border-radius:22px;padding:24px 28px;
+  box-shadow:0 0 50px #00ffa344;
+  animation:pop .45s cubic-bezier(.18,.89,.32,1.28);
+}
+.reveal small{display:block;color:var(--cyber);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.76rem}
+.reveal strong{
+  display:block;font-family:"Syne",sans-serif;font-size:clamp(2rem,6vw,2.6rem);
+  color:var(--accent);margin:6px 0 14px;
+  text-shadow:0 0 24px #00ffa366;
+}
+.tip{
+  background:rgba(4,6,11,.85);border:1px solid #24385e;border-radius:14px;
+  padding:14px 16px;text-align:left;font-size:.92rem;color:#d6e3fa;
+}
+.tip b{color:var(--accent2);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:4px}
 @keyframes pop{from{transform:scale(.75);opacity:0}}
-.note{font-size:.84rem;color:var(--muted);max-width:500px;margin:16px auto 0}
-footer{padding:32px 0 48px;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.88rem}
+.note{font-size:.84rem;color:var(--muted);max-width:510px;margin:18px auto 0}
+footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.88rem}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
+<!-- Cinta neón superior -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>🛸 MISIÓN CLASIFICADA · OPERADORA VALMEX 2026</span>
+    <span>🥤 INTERCAMBIO DE TERMOS PERSONALIZADOS</span>
+    <span>🌮 PRÓXIMA PARADA: TAQUERÍA OVNIS POLANCO</span>
+    <span>🚫 TAZAS Y CALCETINES ESTRICTAMENTE VETADOS</span>
+    <span>🛸 MISIÓN CLASIFICADA · OPERADORA VALMEX 2026</span>
+    <span>🥤 INTERCAMBIO DE TERMOS PERSONALIZADOS</span>
+    <span>🌮 PRÓXIMA PARADA: TAQUERÍA OVNIS POLANCO</span>
+    <span>🚫 TAZAS Y CALCETINES ESTRICTAMENTE VETADOS</span>
+  </div>
+</div>
+
 <nav>
   <div class="wrap">
-    <b>🛸 VALMEX · Intercambio 2026</b>
+    <div class="brand"><span class="brand-dot"></span> VALMEX · OVNI MISSION 2026</div>
     <div>
       <a href="#dinamica">La dinámica</a>
-      <a class="pill" href="#ruleta">Girar ruleta</a>
+      <a class="pill" href="#ruleta">⚡ Girar ruleta</a>
     </div>
   </div>
 </nav>
@@ -113,45 +414,77 @@ footer{padding:32px 0 48px;text-align:center;color:var(--muted);border-top:1px s
 <header class="hero">
   <div class="wrap">
     <div>
-      <div class="badge-row"><span class="ufo">🛸</span> Invitación oficial · Últimos días</div>
-      <h1>Tu misión: <span>el termo perfecto</span></h1>
-      <p class="lead">Estamos a nada de cerrar el año juntos. Antes de irnos por los tacos, tienes una misión secreta: descubrir a quién del equipo le vas a diseñar un termo único.</p>
+      <div class="badge-row"><span class="pulse"></span> Transmisión oficial · Últimos días</div>
+      <h1>Tu misión secreta: <span>el termo de otro planeta</span></h1>
+      <p class="lead">Antes de aterrizar en Taquería Ovnis para cerrar el año, tienes una misión confidencial: descubrir a quién del equipo le vas a diseñar un termo legendario.</p>
       <div class="meta-pills" id="metaPills"></div>
       <div class="cta">
-        <a class="btn" href="#ruleta">Descubrir mi amigo secreto</a>
-        <a class="btn ghost" href="#dinamica">¿Cómo funciona?</a>
+        <a class="btn" href="#ruleta">🛸 Revelar mi amigo secreto</a>
+        <a class="btn ghost" href="#dinamica">Ver instrucciones</a>
       </div>
     </div>
-    <div class="card count">
-      <div class="eyebrow">Cuenta regresiva</div>
-      <h3 id="cdTitle">Para la entrega de termos</h3>
-      <div class="cd">
-        <div><b id="cd-d">00</b><small>Días</small></div>
-        <div><b id="cd-h">00</b><small>Horas</small></div>
-        <div><b id="cd-m">00</b><small>Min</small></div>
-        <div><b id="cd-s">00</b><small>Seg</small></div>
+
+    <div class="ufo-stage">
+      <!-- OVNI SVG con rayo abductor sobre el contador -->
+      <div class="ufo-wrap" aria-hidden="true">
+        <svg viewBox="0 0 160 90" width="100%" height="auto">
+          <defs>
+            <linearGradient id="ufoBody" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00ffa3"/>
+              <stop offset="50%" stop-color="#00d4ff"/>
+              <stop offset="100%" stop-color="#2a3f6e"/>
+            </linearGradient>
+            <linearGradient id="ufoDome" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#a8ffff" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.35"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="80" cy="56" rx="34" ry="9" fill="#00ffa3" opacity="0.45"/>
+          <path d="M48 44 C48 16, 112 16, 112 44 Z" fill="url(#ufoDome)" stroke="#7df9ff" stroke-width="1.5"/>
+          <ellipse cx="80" cy="46" rx="70" ry="17" fill="url(#ufoBody)" stroke="#07101e" stroke-width="2.5"/>
+          <circle cx="34" cy="46" r="4.5" fill="#ffb800"/>
+          <circle cx="56" cy="51" r="4.5" fill="#ff2a85"/>
+          <circle cx="80" cy="53" r="4.5" fill="#ffffff"/>
+          <circle cx="104" cy="51" r="4.5" fill="#ff2a85"/>
+          <circle cx="126" cy="46" r="4.5" fill="#ffb800"/>
+        </svg>
       </div>
-      <p class="muted" style="margin:10px 0 0;font-size:.88rem" id="cdSub"></p>
+      <div class="ufo-beam" aria-hidden="true"></div>
+
+      <div class="card count">
+        <div class="eyebrow">Cuenta regresiva</div>
+        <h3 id="cdTitle">Para el aterrizaje y entrega</h3>
+        <div class="cd">
+          <div><b id="cd-d">00</b><small>Días</small></div>
+          <div><b id="cd-h">00</b><small>Horas</small></div>
+          <div><b id="cd-m">00</b><small>Min</small></div>
+          <div><b id="cd-s">00</b><small>Seg</small></div>
+        </div>
+        <p class="muted" style="margin:10px 0 0;font-size:.88rem" id="cdSub"></p>
+      </div>
     </div>
   </div>
 </header>
 
 <section id="dinamica">
   <div class="wrap">
-    <div class="eyebrow">Dinámica del intercambio</div>
-    <h2>3 pasos para cumplir tu misión</h2>
+    <div class="eyebrow">Protocolo del intercambio</div>
+    <h2>3 pasos para completar la misión</h2>
     <div class="steps">
       <div class="step">
+        <div class="step-ico">🎯</div>
         <div class="step-head">Gira la ruleta</div>
-        <p>Elige tu nombre abajo y descubre quién te tocó. Guarda el secreto hasta el día de la cena.</p>
+        <p>Selecciona tu nombre abajo y descubre a quién te toca regalarle. Nadie más debe saberlo.</p>
       </div>
       <div class="step">
+        <div class="step-ico">🔥</div>
         <div class="step-head">Personaliza el termo</div>
-        <p>Usa grabado láser, vinil o stickers resistentes al agua con su frase típica, color favorito o hobby.</p>
+        <p>Grabado láser, vinil o stickers waterproof con su frase de oficina, hobby, equipo o color favorito.</p>
       </div>
       <div class="step">
+        <div class="step-ico">🎁</div>
         <div class="step-head">Llévalo envuelto</div>
-        <p>El viernes lo intercambiamos en la fiesta y adivinamos quién diseñó cada termo.</p>
+        <p>En la cena abriremos los termos y tendremos que adivinar quién diseñó cada uno.</p>
       </div>
     </div>
     <div class="chips" id="reglas"></div>
@@ -160,25 +493,25 @@ footer{padding:32px 0 48px;text-align:center;color:var(--muted);border-top:1px s
 
 <section id="ruleta">
   <div class="wrap">
-    <div class="eyebrow">Sorteo oficial</div>
-    <h2>La ruleta cósmica</h2>
+    <div class="eyebrow">Asignación encriptada</div>
+    <h2>La ruleta abductora</h2>
     <div class="roulette">
-      <p class="muted" style="margin:0">Selecciona tu nombre para abrir tu invitación y activar la ruleta.</p>
+      <p class="muted" style="margin:0;font-size:1.02rem">Elige tu nombre para desbloquear tu pase y activar el reactor de la ruleta.</p>
       <div class="picker">
         <select id="quien" aria-label="Selecciona tu nombre">
-          <option value="">👇 Elige tu nombre aquí</option>
+          <option value="">👇 Selecciona tu nombre aquí</option>
         </select>
-        <label class="snd"><input type="checkbox" id="snd" checked> 🔊 Sonido</label>
+        <label class="snd"><input type="checkbox" id="snd" checked> 🔊 Efectos de sonido</label>
       </div>
 
       <!-- Pase personalizado dinámico -->
       <div class="invite-pass hide" id="paseInvitado">
         <div class="pass-top">
-          <span>🎟️ Invitación confirmada</span>
-          <span>Operadora VALMEX</span>
+          <span>🛸 AGENTE CONFIRMADO</span>
+          <span>OPERADORA VALMEX</span>
         </div>
         <h3 id="passSaludo">¡Hola!</h3>
-        <p>Presiona <b style="color:var(--accent)">GIRAR</b> en el centro de la ruleta para revelar a tu amigo secreto y recibir un consejo para su termo.</p>
+        <p>Presiona <b style="color:var(--accent)">GIRAR</b> en el núcleo de la ruleta para revelar tu objetivo y recibir una pista creativa.</p>
       </div>
 
       <div class="wheelbox">
@@ -189,13 +522,13 @@ footer{padding:32px 0 48px;text-align:center;color:var(--muted);border-top:1px s
 
       <div class="result hide" id="resultado" aria-live="polite">
         <div class="reveal">
-          <small id="saludo">Tu amigo secreto es</small>
+          <small id="saludo">Objetivo asignado</small>
           <strong id="ganador">Nombre</strong>
-          <div class="tip"><b>💡 Idea para personalizar su termo</b><span id="tip"></span></div>
-          <button class="btn ghost" id="ocultar" style="margin-top:14px">🙈 Ocultar resultado</button>
+          <div class="tip"><b>💡 Hack para personalizar su termo</b><span id="tip"></span></div>
+          <button class="btn ghost" id="ocultar" style="margin-top:16px">🙈 Ocultar pantalla</button>
         </div>
       </div>
-      <p class="note">Tu asignación ya está fijada y es siempre la misma, incluso si entras desde otro teléfono. Por favor gira únicamente con tu nombre.</p>
+      <p class="note">🔒 Tu resultado está fijado por algoritmo: siempre te saldrá la misma persona aunque recargues o entres desde otro celular. Entra únicamente con tu nombre.</p>
     </div>
   </div>
 </section>
@@ -216,13 +549,13 @@ var CONFIG={
   semilla:"valmex-fin-de-anio-2026"
 };
 var PARTICIPANTES=["Bob","Kim","Andric","Valeria","Carlos","Fernanda","Rodrigo","Mariana"]; /* Reemplaza por la lista final */
-var REGLAS=["🥤 Solo termos personalizados","🎁 Llevarlo envuelto","🤫 100% secreto"];
+var REGLAS=["🥤 Exclusivo: Termo personalizado","🎁 Entregar envuelto el día del evento","🤫 Misión 100% confidencial"];
 var TIPS=[
-  "Averigua si toma café o té frío y elige un termo con tapa hermética antiderrame.",
-  "Grábale su nombre o apodo junto a un ícono minimalista de su hobby favorito.",
-  "Busca una frase que siempre diga en la oficina y ponla en vinil de buena calidad.",
-  "Stickers resistentes al agua de sus series, bandas o equipos favoritos le dan un toque único.",
-  "Su inicial en tipografía elegante y su color favorito lo volverán su compañero diario de juntas."
+  "Investiga si es team café caliente o bebidas frías y busca un termo con tapa hermética antiderrame.",
+  "Grábale su nombre o apodo junto a un ícono de su deporte, serie o hobby favorito.",
+  "Ponle en vinil esa frase clásica que siempre repite en las juntas o en el chat.",
+  "Ármale un collage con stickers resistentes al agua de sus bandas, viajes o gustos culposos.",
+  "Un termo en su color favorito con sus iniciales en tipografía brutalista nunca falla."
 ];
 /* ===================================== */
 function $(i){return document.getElementById(i);}
@@ -232,15 +565,15 @@ function $(i){return document.getElementById(i);}
   $("metaPills").insertAdjacentHTML("beforeend",'<span class="meta-pill">'+x[0]+' '+x[1]+'</span>');
 });
 REGLAS.forEach(function(t){$("reglas").insertAdjacentHTML("beforeend",'<span class="chip">'+t+'</span>');});
-$("reglas").insertAdjacentHTML("beforeend",'<span class="chip no">🚫 Tazas y calcetines, vetados</span>');
-$("pie").innerHTML="Operadora VALMEX · Área Comercial · "+CONFIG.fechaTxt+" · "+CONFIG.lugar;
+$("reglas").insertAdjacentHTML("beforeend",'<span class="chip no">🚫 Tazas y calcetines, vetados de esta galaxia</span>');
+$("pie").innerHTML="🛸 Operadora VALMEX · Área Comercial · "+CONFIG.fechaTxt+" · "+CONFIG.lugar;
 $("cdSub").textContent=CONFIG.fechaTxt+" · "+CONFIG.horaTxt;
 
 /* Cuenta regresiva */
 var EVENT=new Date(CONFIG.fechaISO).getTime();
 function cuenta(){
   var d=EVENT-Date.now();
-  if(d<=0){d=0;$("cdTitle").textContent="¡Hoy es la entrega de termos!";}
+  if(d<=0){d=0;$("cdTitle").textContent="¡Llegó el día del intercambio!";}
   var v=[Math.floor(d/864e5),Math.floor(d%864e5/36e5),Math.floor(d%36e5/6e4),Math.floor(d%6e4/1e3)];
   ["d","h","m","s"].forEach(function(k,i){$("cd-"+k).textContent=String(v[i]).padStart(2,"0");});
 }
@@ -258,13 +591,13 @@ var AC;
 function beep(f,d){
   if(!$("snd").checked)return;
   try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();
-    var o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f;g.gain.value=.05;
+    var o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f;g.gain.value=.055;
     o.connect(g);g.connect(AC.destination);o.start();g.gain.exponentialRampToValueAtTime(.0001,AC.currentTime+d);o.stop(AC.currentTime+d);}catch(e){}
 }
 
 /* Ruleta */
 var sel=$("quien"),btn=$("girar"),res=$("resultado"),pase=$("paseInvitado"),cv=$("wheel"),ctx=cv.getContext("2d"),rot=0,spinning=false;
-var COLORS=["#16303a","#1d3f3a","#2a2f45","#233a2e"],TAU=2*Math.PI;
+var COLORS=["#0c2333","#131d38","#0f2d2a","#1f1938"],TAU=2*Math.PI;
 names.slice().sort(function(a,b){return a.localeCompare(b,"es");}).forEach(function(n){sel.insertAdjacentHTML("beforeend","<option>"+n+"</option>");});
 function cands(){return names.filter(function(n){return n!==sel.value;});}
 function mod(x){return((x%TAU)+TAU)%TAU;}
@@ -272,21 +605,24 @@ function draw(){
   var dpr=window.devicePixelRatio||1,S=cv.getBoundingClientRect().width;if(!S)return;
   cv.width=cv.height=S*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
   var c=S/2,R=c-10,list=cands(),N=list.length,arc=TAU/N;
-  ctx.beginPath();ctx.arc(c,c,R+6,0,TAU);ctx.fillStyle="#7dffb3";ctx.fill();
+  var grad=ctx.createLinearGradient(0,0,S,S);
+  grad.addColorStop(0,"#00ffa3");grad.addColorStop(0.5,"#00d4ff");grad.addColorStop(1,"#ff2a85");
+  ctx.beginPath();ctx.arc(c,c,R+6,0,TAU);ctx.fillStyle=grad;ctx.fill();
   list.forEach(function(n,i){
     var a=rot+i*arc;
     ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,R,a,a+arc);ctx.closePath();
-    ctx.fillStyle=COLORS[i%4];ctx.fill();ctx.lineWidth=2;ctx.strokeStyle="#0a0e13";ctx.stroke();
+    ctx.fillStyle=COLORS[i%4];ctx.fill();ctx.lineWidth=2;ctx.strokeStyle="#00ffa333";ctx.stroke();
     ctx.save();ctx.translate(c,c);ctx.rotate(a+arc/2);ctx.textAlign="right";ctx.textBaseline="middle";
-    ctx.fillStyle="#e9eff6";ctx.font="700 "+(N>14?12:N>9?14:16)+"px 'Space Grotesk',system-ui,sans-serif";ctx.fillText(n,R-20,0);ctx.restore();
+    ctx.fillStyle="#f2f6ff";ctx.font="700 "+(N>14?12:N>9?14:16)+"px 'Space Grotesk',system-ui,sans-serif";ctx.fillText(n,R-20,0);ctx.restore();
   });
 }
 sel.addEventListener("change",function(){
   btn.disabled=!sel.value||spinning;
   res.classList.add("hide");
   if(sel.value){
-    $("passSaludo").textContent="¡Hola, "+sel.value+"! Esta es tu misión secreta:";
+    $("passSaludo").textContent="¡Bienvenido a bordo, "+sel.value+"!";
     pase.classList.remove("hide");
+    beep(620,.08);
   }else{
     pase.classList.add("hide");
   }
@@ -302,18 +638,18 @@ btn.addEventListener("click",function(){
   var t0=performance.now(),dur=4800,last=-1;
   (function f(now){
     var p=Math.min((now-t0)/dur,1),e=1-Math.pow(1-p,3);rot=from+(to-from)*e;draw();
-    var idx=Math.floor(mod(1.5*Math.PI-rot)/arc)%N;if(idx!==last){last=idx;beep(520,.04);}
+    var idx=Math.floor(mod(1.5*Math.PI-rot)/arc)%N;if(idx!==last){last=idx;beep(540,.04);}
     if(p<1)requestAnimationFrame(f);else fin(target);
   })(t0);
 });
 function fin(target){
   spinning=false;btn.disabled=false;sel.disabled=false;
-  $("saludo").textContent="¡"+sel.value+", tu amigo secreto es:";
+  $("saludo").textContent="⚡ "+sel.value+", te toca personalizar el termo de:";
   $("ganador").textContent=target;
   $("tip").textContent=TIPS[Math.floor(Math.random()*TIPS.length)];
   res.classList.remove("hide");
-  beep(660,.15);setTimeout(function(){beep(880,.3);},160);
-  if(typeof confetti==="function")confetti({particleCount:90,spread:75,origin:{y:.65},colors:["#7dffb3","#ffb04a","#ffffff","#2a2f45"]});
+  beep(660,.15);setTimeout(function(){beep(920,.32);},160);
+  if(typeof confetti==="function")confetti({particleCount:110,spread:80,origin:{y:.65},colors:["#00ffa3","#00d4ff","#ffb800","#ff2a85","#ffffff"]});
 }
 $("ocultar").addEventListener("click",function(){
   res.classList.add("hide");
