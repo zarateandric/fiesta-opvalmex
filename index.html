@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OVNI MISSION · Intercambio de Termos VALMEX 2026</title>
-<meta name="description" content="Invitación oficial al intercambio de termos personalizados de Operadora VALMEX. Descubre a tu amigo secreto en la ruleta.">
+<meta name="description" content="Invitación oficial al intercambio de termos personalizados de Operadora VALMEX. Ingresa tu código secreto y descubre a tu amigo secreto en la ruleta.">
 <!-- Favicon de OVNI en SVG -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2300ffa3'/%3E%3Cstop offset='100%25' stop-color='%2300c3ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='22,36 42,36 52,62 12,62' fill='%2300ffa3' opacity='0.28'/%3E%3Cpath d='M20 26a12 10 0 0 1 24 0Z' fill='%237df9ff'/%3E%3Cellipse cx='32' cy='28' rx='28' ry='9' fill='url(%23g)'/%3E%3Cellipse cx='32' cy='28' rx='28' ry='9' fill='none' stroke='%2305070d' stroke-width='2'/%3E%3Ccircle cx='16' cy='28' r='2.5' fill='%23ffb800'/%3E%3Ccircle cx='26' cy='31' r='2.5' fill='%23ff2a85'/%3E%3Ccircle cx='38' cy='31' r='2.5' fill='%23ffb800'/%3E%3Ccircle cx='48' cy='28' r='2.5' fill='%23ff2a85'/%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -65,7 +65,7 @@ h2{font-size:clamp(1.75rem,4.2vw,2.6rem)}
 }
 .muted{color:var(--muted)}
 
-/* Cinta superior en movimiento continuo (siempre activa) */
+/* Cinta superior en movimiento continuo */
 .ticker{
   position:relative;
   z-index:35;
@@ -164,7 +164,7 @@ nav a.pill:hover{transform:translateY(-2px);box-shadow:0 0 32px #00ffa399;color:
   color:#bfd0ee;font-size:1.12rem;max-width:640px;margin:0 auto 22px;
 }
 
-.meta-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:6px auto 0;max-width:740px}
+.meta-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:6px auto 0;max-width:760px}
 .meta-pill{
   background:rgba(17,25,44,.84);
   border:1px solid #2a3c63;
@@ -247,7 +247,7 @@ nav a.pill:hover{transform:translateY(-2px);box-shadow:0 0 32px #00ffa399;color:
 }
 .cd small{color:var(--muted);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
 
-/* Dinámica breve (3 pasos todos centrados) */
+/* Dinámica breve (3 pasos centrados) */
 .steps{
   counter-reset:s;
   display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -304,21 +304,49 @@ nav a.pill:hover{transform:translateY(-2px);box-shadow:0 0 32px #00ffa399;color:
   overflow:hidden;
   margin-top:16px;
 }
-.picker{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;margin:22px 0}
-select{
-  background:#0d1526;color:var(--text);
-  border:2px solid var(--accent);
-  border-radius:14px;padding:14px 18px;
-  font:inherit;font-weight:700;font-size:1rem;min-width:270px;cursor:pointer;
-  box-shadow:0 0 25px #00ffa333;
-  outline:none;text-align:center;
+
+/* Acceso por Código Secreto */
+.picker{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;
+  margin:22px auto 12px;max-width:640px;
 }
-select:focus{box-shadow:0 0 35px #00ffa366}
+.code-box{
+  display:flex;align-items:center;gap:8px;
+  background:#0d1526;border:2px solid var(--accent);
+  border-radius:16px;padding:6px 8px 6px 16px;
+  box-shadow:0 0 25px #00ffa32b;
+  transition:border-color .2s,box-shadow .2s;
+}
+.code-box:focus-within{
+  box-shadow:0 0 36px #00ffa366;
+  border-color:var(--cyber);
+}
+.code-box input{
+  background:transparent;border:0;color:var(--text);
+  font:700 1.08rem "Space Grotesk",monospace;
+  letter-spacing:.14em;text-transform:uppercase;
+  width:170px;outline:none;text-align:center;
+}
+.code-box input::placeholder{
+  color:#586b8f;letter-spacing:.06em;font-weight:600;text-transform:none;
+}
+.code-btn{
+  background:linear-gradient(135deg,var(--accent),var(--cyber));
+  color:#02120c;border:0;border-radius:11px;
+  padding:10px 18px;font:700 .88rem inherit;cursor:pointer;
+  transition:transform .15s,opacity .15s;
+}
+.code-btn:hover{transform:scale(1.03)}
 .snd{
   font-size:.9rem;color:var(--muted);cursor:pointer;
   display:flex;gap:8px;align-items:center;
-  background:#0d1526;border:1px solid #243659;padding:12px 16px;border-radius:14px;
+  background:#0d1526;border:1px solid #243659;padding:13px 16px;border-radius:16px;
 }
+.code-status{
+  min-height:22px;font-size:.88rem;font-weight:600;margin:4px auto 14px;
+}
+.code-status.err{color:#ff7aa8}
+.code-status.ok{color:var(--accent)}
 
 /* Pase personalizado centrado */
 .invite-pass{
@@ -330,16 +358,16 @@ select:focus{box-shadow:0 0 35px #00ffa366}
   animation:fadeIn .35s ease;
 }
 .invite-pass .pass-top{
-  display:flex;justify-content:center;gap:14px;align-items:center;
+  display:flex;justify-content:center;gap:12px;align-items:center;flex-wrap:wrap;
   font-size:.74rem;color:var(--accent);text-transform:uppercase;letter-spacing:.15em;font-weight:700;margin-bottom:6px
 }
-.invite-pass h3{font-size:1.22rem;margin:0 0 4px;font-family:"Syne",sans-serif}
+.invite-pass h3{font-size:1.25rem;margin:0 0 6px;font-family:"Syne",sans-serif;color:#fff}
 .invite-pass p{margin:0;font-size:.92rem;color:#bfd0ee}
 @keyframes fadeIn{from{opacity:0;transform:translateY(-8px)}}
 
 /* Contenedor de la Ruleta */
 .wheelbox{
-  position:relative;width:min(90vw,440px);aspect-ratio:1;margin:20px auto;
+  position:relative;width:min(92vw,470px);aspect-ratio:1;margin:20px auto;
   padding:12px;border-radius:50%;
   background:radial-gradient(circle,#00ffa322 0%,transparent 70%);
 }
@@ -359,22 +387,22 @@ select:focus{box-shadow:0 0 35px #00ffa366}
   filter:drop-shadow(0 4px 10px #ffb800aa);z-index:4;
 }
 #girar{
-  position:absolute;inset:0;margin:auto;width:98px;height:98px;border-radius:50%;
+  position:absolute;inset:0;margin:auto;width:100px;height:100px;border-radius:50%;
   border:4px solid var(--bg);
   background:radial-gradient(circle at 30% 30%,#ffffff,var(--accent) 45%,var(--cyber) 100%);
-  color:#02120b;font:800 1rem "Syne",sans-serif;letter-spacing:.06em;
+  color:#02120b;font:800 .96rem "Syne",sans-serif;letter-spacing:.05em;
   cursor:pointer;z-index:3;
   box-shadow:0 0 30px #00ffa3cc,0 0 60px #00ffa366;
   transition:transform .18s,box-shadow .18s;
 }
 #girar:hover:not(:disabled){transform:scale(1.08);box-shadow:0 0 42px #00ffa3,0 0 80px #00d4ff}
-#girar:disabled{filter:grayscale(.8);opacity:.5;cursor:not-allowed;box-shadow:none}
+#girar:disabled{filter:grayscale(.85);opacity:.45;cursor:not-allowed;box-shadow:none}
 
 /* Revelación del Amigo Secreto Centrada */
 .result{margin-top:24px}
 .hide{display:none}
 .reveal{
-  display:inline-block;max-width:480px;width:100%;
+  display:inline-block;max-width:490px;width:100%;
   background:linear-gradient(160deg,#132238,#0b1220);
   border:2px solid var(--accent);
   border-radius:22px;padding:24px 28px;
@@ -384,8 +412,8 @@ select:focus{box-shadow:0 0 35px #00ffa366}
 }
 .reveal small{display:block;color:var(--cyber);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.76rem}
 .reveal strong{
-  display:block;font-family:"Syne",sans-serif;font-size:clamp(2rem,6vw,2.6rem);
-  color:var(--accent);margin:6px 0 14px;
+  display:block;font-family:"Syne",sans-serif;font-size:clamp(1.85rem,5.5vw,2.45rem);
+  color:var(--accent);margin:8px 0 14px;
   text-shadow:0 0 24px #00ffa366;
 }
 .tip{
@@ -393,8 +421,9 @@ select:focus{box-shadow:0 0 35px #00ffa366}
   padding:14px 16px;text-align:center;font-size:.92rem;color:#d6e3fa;
 }
 .tip b{color:var(--accent2);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:4px}
+.auto-hide-msg{display:block;margin-top:10px;font-size:.76rem;color:var(--muted)}
 @keyframes pop{from{transform:scale(.75);opacity:0}}
-.note{font-size:.84rem;color:var(--muted);max-width:510px;margin:18px auto 0}
+.note{font-size:.84rem;color:var(--muted);max-width:540px;margin:18px auto 0}
 footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.88rem;position:relative;z-index:1}
 </style>
 </head>
@@ -408,13 +437,13 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
   <div class="ticker-track">
     <span>🛸 MISIÓN CLASIFICADA · OPERADORA VALMEX 2026</span>
     <span>🥤 INTERCAMBIO DE TERMOS PERSONALIZADOS</span>
-    <span>🌮 PRÓXIMA PARADA: TAQUERÍA OVNIS POLANCO</span>
+    <span>🌮 VIERNES 27 NOV · 16:00 HRS · TAQUERÍA OVNIS</span>
     <span>🚫 TAZAS Y CALCETINES ESTRICTAMENTE VETADOS</span>
   </div>
   <div class="ticker-track" aria-hidden="true">
     <span>🛸 MISIÓN CLASIFICADA · OPERADORA VALMEX 2026</span>
     <span>🥤 INTERCAMBIO DE TERMOS PERSONALIZADOS</span>
-    <span>🌮 PRÓXIMA PARADA: TAQUERÍA OVNIS POLANCO</span>
+    <span>🌮 VIERNES 27 NOV · 16:00 HRS · TAQUERÍA OVNIS</span>
     <span>🚫 TAZAS Y CALCETINES ESTRICTAMENTE VETADOS</span>
   </div>
 </div>
@@ -424,21 +453,21 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
     <div class="brand"><span class="brand-dot"></span> VALMEX · OVNI MISSION 2026</div>
     <div>
       <a href="#dinamica">La dinámica</a>
-      <a class="pill" href="#ruleta">⚡ Girar ruleta</a>
+      <a class="pill" href="#ruleta">🔐 Ingresar código</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <div class="badge-row"><span class="pulse"></span> Transmisión oficial · Últimos días</div>
+    <div class="badge-row"><span class="pulse"></span> Transmisión oficial · Acceso por código</div>
     <h1>Tu misión secreta: <span>el termo de otro planeta</span></h1>
-    <p class="lead">Antes de aterrizar en Taquería Ovnis para cerrar el año, tienes una misión confidencial: descubrir a quién del equipo le vas a diseñar un termo legendario.</p>
+    <p class="lead">Antes de aterrizar en Taquería Ovnis para cerrar el año, tienes una misión confidencial: ingresar tu código personal y descubrir a quién del equipo le vas a diseñar un termo legendario.</p>
 
     <div class="meta-pills" id="metaPills"></div>
 
     <div class="cta">
-      <a class="btn" href="#ruleta">🛸 Revelar mi amigo secreto</a>
+      <a class="btn" href="#ruleta">🔐 Desbloquear mi ruleta</a>
       <a class="btn ghost" href="#dinamica">Ver instrucciones</a>
     </div>
 
@@ -490,9 +519,9 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
     <h2>3 pasos para completar la misión</h2>
     <div class="steps">
       <div class="step">
-        <div class="step-ico">🎯</div>
-        <div class="step-head">Gira la ruleta</div>
-        <p>Selecciona tu nombre abajo y descubre a quién te toca regalarle. Nadie más debe saberlo.</p>
+        <div class="step-ico">🔐</div>
+        <div class="step-head">Ingresa tu código secreto</div>
+        <p>Escribe tu código personal (`OVNI-XXXX`) abajo para identificarte automáticamente y desbloquear la ruleta.</p>
       </div>
       <div class="step">
         <div class="step-ico">🔥</div>
@@ -502,7 +531,7 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
       <div class="step">
         <div class="step-ico">🎁</div>
         <div class="step-head">Llévalo envuelto</div>
-        <p>En la cena abriremos los termos y tendremos que adivinar quién diseñó cada uno.</p>
+        <p>El viernes 27 a las 4:00 PM abriremos los termos en la fiesta y adivinaremos quién diseñó cada uno.</p>
       </div>
     </div>
     <div class="chips" id="reglas"></div>
@@ -511,32 +540,37 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
 
 <section id="ruleta">
   <div class="wrap">
-    <div class="eyebrow">Asignación encriptada</div>
+    <div class="eyebrow">Asignación encriptada SHA-256</div>
     <h2>La ruleta abductora</h2>
     <div class="roulette">
-      <p class="muted" style="margin:0;font-size:1.02rem">Elige tu nombre para desbloquear tu pase y activar el reactor de la ruleta.</p>
+      <p class="muted" style="margin:0;font-size:1.02rem">Ingresa tu <b style="color:var(--accent)">código secreto personal</b> para activar el reactor de la ruleta.</p>
+
       <div class="picker">
-        <select id="quien" aria-label="Selecciona tu nombre">
-          <option value="">👇 Selecciona tu nombre aquí</option>
-        </select>
+        <div class="code-box">
+          <span>🔑</span>
+          <input type="text" id="codigoInput" placeholder="Ej. OVNI-XXXX" maxlength="12" autocomplete="off" spellcheck="false" aria-label="Ingresa tu código secreto">
+          <button type="button" class="code-btn" id="validarBtn">Validar</button>
+        </div>
         <label class="snd"><input type="checkbox" id="snd" checked> 🔊 Efectos de sonido</label>
       </div>
+
+      <div class="code-status" id="codeStatus" aria-live="polite"></div>
 
       <!-- Pase personalizado dinámico centrado -->
       <div class="invite-pass hide" id="paseInvitado">
         <div class="pass-top">
-          <span>🛸 AGENTE CONFIRMADO</span>
+          <span>🛸 AGENTE IDENTIFICADO</span>
           <span>·</span>
-          <span>OPERADORA VALMEX</span>
+          <span id="passCodigo">CÓDIGO VERIFICADO</span>
         </div>
         <h3 id="passSaludo">¡Hola!</h3>
-        <p>Presiona <b style="color:var(--accent)">GIRAR</b> en el núcleo de la ruleta para revelar tu objetivo y recibir una pista creativa.</p>
+        <p>Tu identidad fue verificada. Presiona <b style="color:var(--accent)">GIRAR</b> en el centro de la ruleta para desencriptar a quién le regalas.</p>
       </div>
 
       <div class="wheelbox">
         <div class="pointer"></div>
         <canvas id="wheel"></canvas>
-        <button id="girar" disabled>GIRAR</button>
+        <button id="girar" disabled>🔒 BLOQUEADO</button>
       </div>
 
       <div class="result hide" id="resultado" aria-live="polite">
@@ -544,10 +578,11 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
           <small id="saludo">Objetivo asignado</small>
           <strong id="ganador">Nombre</strong>
           <div class="tip"><b>💡 Hack para personalizar su termo</b><span id="tip"></span></div>
-          <button class="btn ghost" id="ocultar" style="margin-top:16px">🙈 Ocultar pantalla</button>
+          <span class="auto-hide-msg" id="autoHideMsg">Por seguridad, esta pantalla se ocultará automáticamente en 45 s.</span>
+          <button class="btn ghost" id="ocultar" style="margin-top:14px">🙈 Ocultar y bloquear ahora</button>
         </div>
       </div>
-      <p class="note">🔒 Tu resultado está fijado por algoritmo: siempre te saldrá la misma persona aunque recargues o entres desde otro celular. Entra únicamente con tu nombre.</p>
+      <p class="note">🔒 Blindaje total: sin tu código secreto nadie puede girar por ti ni ver quién te tocó (ni siquiera inspeccionando el código fuente de la página).</p>
     </div>
   </div>
 </section>
@@ -558,17 +593,63 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script>
-/* ===== CONFIGURACIÓN: edita aquí ===== */
+/* ===== CONFIGURACIÓN DEL EVENTO ===== */
 var CONFIG={
   lugar:"Taquería Ovnis, Polanco, CDMX",
   fechaTxt:"Viernes 27 de noviembre de 2026",
-  horaTxt:"19:00 hrs",
-  fechaISO:"2026-11-27T19:00:00-06:00",
-  vestimenta:"Casual y cómoda",
-  semilla:"valmex-fin-de-anio-2026"
+  horaTxt:"16:00 hrs (4:00 PM)",
+  fechaISO:"2026-11-27T16:00:00-06:00",
+  vestimenta:"Casual y cómoda"
 };
-var PARTICIPANTES=["Bob","Kim","Andric","Valeria","Carlos","Fernanda","Rodrigo","Mariana"]; /* Reemplaza por la lista final */
-var REGLAS=["🥤 Exclusivo: Termo personalizado","🎁 Entregar envuelto el día del evento","🤫 Misión 100% confidencial"];
+
+/* Lista oficial de 19 participantes para dibujar la ruleta */
+var PARTICIPANTES=[
+  "Roberto Cano (Bob)",
+  "Kimberly Acosta (Kim)",
+  "Jose Quintanal (Chema)",
+  "Rosa Maria (Rosy)",
+  "Kari Ruiz",
+  "Mar Lopez",
+  "Andric Zarate",
+  "Sara Reyes (Sarita)",
+  "Arturo",
+  "Allende",
+  "Karina Beristain",
+  "Santiago Sanchez",
+  "Fernando",
+  "Fabian",
+  "Bruno",
+  "Daniel",
+  "Angie",
+  "Angel",
+  "Juan Carlos"
+];
+
+/* Bóveda encriptada con SHA-256 + XOR por código personal.
+   Nadie puede saber quién le regala a quién sin conocer el código secreto individual. */
+var VAULT={
+  "ec8bb245b94c4f36aa00bec5da1842cc90a3be43c5f804242c4615c0cb7fad8e":{g:"5a5a52a9ea48f4c87a",r:"425a52a1ea48e4d865200b8d5a52a86a1a0ec0"},
+  "b3e2dfd1c8b15a0a6a49748ce92103cb6607f619038ef96362b1bac3bd88412f":{g:"64aadc716e",r:"74b7cb7a737525e2f142389eff51ef5caed7"},
+  "f507a2df8ebc90654d93a27a3522dfa277d81a6e270117f669e4b9263762e602":{g:"fbcd487872d43722120161dbfaf3a1b0b385ad2422c0",r:"f0cc5c783e"},
+  "7c6a2f6cacac7444284c5b9982785f9fc02a65a88674724282d64a68fc863b96":{g:"2af581fcda67af18688e46cec54d6f35e0",r:"2bfb9ce9934ba90521bc0788f44a7936"},
+  "bb5952255179e1772f2a2200614024aa741e864922807538a74c6b818adbd55b":{g:"3d3231bf56bdaa9cb0c636dfdea89623f3e24b",r:"283631b01781ab8a"},
+  "37d57790cb8ac72c692f9bb9009c10100f3c3e37bde91b3f9ae6e70fb1af9dad":{g:"cd7d6b290b2f",r:"c27568220b3132f0398249881705d8ab96abebea49"},
+  "43743fecf30cd83846c483b07add840199a6998d81752fd1c30499c931882287":{g:"8c32fedc9718f434",r:"8b3be0d79812f5"},
+  "eee5bc6f7e8a260c31c564591f0d42b28800252dbdc942fb277df01a2581dad3":{g:"80357e214d427e9d387615",r:"81216d2603603fad316b0f681d10d0ea"},
+  "97ee5424302605377f03b9740b190df5129fc51497661e071eb5716263e657a8":{g:"300aaf3008",r:"3316bd3b0b"},
+  "e084b220aef38407cb16d12267c2bede1db73e648f774a1b6e91f7797e29f53b":{g:"c8bd7448a3169e",r:"c8bf7c5fa411dbc19bb8db23bf"},
+  "901998d4704402f2c0633c6d421399c1b290ad80eb76cd3b59bb5811ee54fea4":{g:"a326ce75c2f0389a1b6db60c313a8560",r:"b135d474d9fe"},
+  "829fe3661ebad66905fc3be961d8b3f4735e81a30723667cd93f2bc0f02337d4":{g:"401cd1eb4df4a7cd7e63fef7b586d80a",r:"461cd1a26ffaf7ea61"},
+  "567ff570240452a079b7d9b963fe5d38acc5d65b76fc412212f3c11d974009df":{g:"9a808503658f83a840",r:"9380994a4c8c"},
+  "1899be406be1b7433dc7509ba9741dd5b6d7a19708ddfd392bddc965f61ed65d":{g:"a93399e8f30df1ccfa605650f83fd4f161d6ad7697",r:"a33493e3f3"},
+  "cf8064726440d12f458ed56e87d22b2a52b31fbc7a085b1af8d74c9e89f9a8f1":{g:"52e8fe9e0b20cfcfea0beea9dce09ce4a995",r:"46e6fe92183a"},
+  "94cf682719c8fef55c0759b1a7e77214f1130dbe7e316f452c213cc1ce4d61cd":{g:"828c725553",r:"918d665d165cc5e6c9f97af5cbab242c5d"},
+  "d9996f379793f80634079108f97bff57224f5841d85a820480a126bda7794f33":{g:"a14174996ca7007057213af62e",r:"aa40638e2595554358273aec2ab028213886e59048be"},
+  "637ced97cda872ad92f84ff43a141fadc75535b2ecc92873c4916403a03a7e26":{g:"f7efc85b7b40",r:"fdfcce47297d496aca"},
+  "f23f65819ecf4e15592cd8b33f8c50688a9772317663b04ba2dbb48d91ddcda5":{g:"406b0a9ebe44",r:"4c7f0999ff694fb1a8397d"}
+};
+
+var REGLAS=["🥤 Exclusivo: Termo personalizado","🎁 Entregar envuelto el viernes 27 a las 4:00 PM","🤫 Misión 100% confidencial"];
 var TIPS=[
   "Investiga si es team café caliente o bebidas frías y busca un termo con tapa hermética antiderrame.",
   "Grábale su nombre o apodo junto a un ícono de su deporte, serie o hobby favorito.",
@@ -586,7 +667,7 @@ function $(i){return document.getElementById(i);}
   function initStars(){
     W=sc.width=window.innerWidth;
     H=sc.height=window.innerHeight;
-    var count=Math.min(110,Math.floor((W*H)/12000));
+    var count=Math.min(115,Math.floor((W*H)/11500));
     stars=[];
     for(var i=0;i<count;i++){
       stars.push({
@@ -597,7 +678,7 @@ function $(i){return document.getElementById(i);}
         p:Math.random()*Math.PI*2,
         s:Math.random()*0.035+0.012,
         vy:Math.random()*0.18+0.04,
-        sparkle:Math.random()<0.28
+        sparkle:Math.random()<0.3
       });
     }
   }
@@ -634,12 +715,12 @@ function $(i){return document.getElementById(i);}
 })();
 
 /* Píldoras de evento, reglas y pie */
-[["📅",CONFIG.fechaTxt],["🕒",CONFIG.horaTxt],["📍",CONFIG.lugar],["👕",CONFIG.vestimenta]].forEach(function(x){
+[["📅",CONFIG.fechaTxt],["🕓",CONFIG.horaTxt],["📍",CONFIG.lugar],["👕",CONFIG.vestimenta]].forEach(function(x){
   $("metaPills").insertAdjacentHTML("beforeend",'<span class="meta-pill">'+x[0]+' '+x[1]+'</span>');
 });
 REGLAS.forEach(function(t){$("reglas").insertAdjacentHTML("beforeend",'<span class="chip">'+t+'</span>');});
 $("reglas").insertAdjacentHTML("beforeend",'<span class="chip no">🚫 Tazas y calcetines, vetados de esta galaxia</span>');
-$("pie").innerHTML="🛸 Operadora VALMEX · Área Comercial · "+CONFIG.fechaTxt+" · "+CONFIG.lugar;
+$("pie").innerHTML="🛸 Operadora VALMEX · Área Comercial · "+CONFIG.fechaTxt+" · "+CONFIG.horaTxt+" · "+CONFIG.lugar;
 $("cdSub").textContent=CONFIG.fechaTxt+" · "+CONFIG.horaTxt;
 
 /* Cuenta regresiva */
@@ -652,13 +733,6 @@ function cuenta(){
 }
 cuenta();setInterval(cuenta,1000);
 
-/* Asignación fija con semilla */
-function hash(s){var h=1779033703^s.length;for(var i=0;i<s.length;i++){h=Math.imul(h^s.charCodeAt(i),3432918353);h=h<<13|h>>>19;}return h>>>0;}
-function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
-var names=PARTICIPANTES.slice(),r=rng(hash(CONFIG.semilla)),order=names.slice(),assign={};
-for(var i=order.length-1;i>0;i--){var j=Math.floor(r()*(i+1)),t=order[i];order[i]=order[j];order[j]=t;}
-order.forEach(function(n,i){assign[n]=order[(i+1)%order.length];});
-
 /* Sonido */
 var AC;
 function beep(f,d){
@@ -668,12 +742,77 @@ function beep(f,d){
     o.connect(g);g.connect(AC.destination);o.start();g.gain.exponentialRampToValueAtTime(.0001,AC.currentTime+d);o.stop(AC.currentTime+d);}catch(e){}
 }
 
-/* Ruleta */
-var sel=$("quien"),btn=$("girar"),res=$("resultado"),pase=$("paseInvitado"),cv=$("wheel"),ctx=cv.getContext("2d"),rot=0,spinning=false;
+/* SHA-256 puro en JS (funciona incluso sin HTTPS o en navegadores antiguos) */
+function sha256Bytes(ascii){
+  function rightRotate(v,a){return(v>>>a)|(v<<(32-a));}
+  var mathPow=Math.pow,maxWord=mathPow(2,32),result=[],words=[],asciiBitLength=ascii.length*8;
+  var hash=[],k=[],primeCounter=0,isComposite={};
+  for(var candidate=2;primeCounter<64;candidate++){
+    if(!isComposite[candidate]){
+      for(var i=0;i<313;i+=candidate)isComposite[i]=candidate;
+      hash[primeCounter]=(mathPow(candidate,.5)*maxWord)|0;
+      k[primeCounter++]=(mathPow(candidate,1/3)*maxWord)|0;
+    }
+  }
+  ascii+="\x80";
+  while(ascii.length%64-56)ascii+="\x00";
+  for(var i=0;i<ascii.length;i++){
+    var j=ascii.charCodeAt(i);
+    words[i>>2]|=j<<((3-i)%4)*8;
+  }
+  words[words.length]=((asciiBitLength/maxWord)|0);
+  words[words.length]=(asciiBitLength);
+  for(var j=0;j<words.length;){
+    var w=words.slice(j,j+=16),oldHash=hash;
+    hash=hash.slice(0,8);
+    for(var i=0;i<64;i++){
+      var w15=w[i-15],w2=w[i-2],a=hash[0],e=hash[4];
+      var temp1=hash[7]+(rightRotate(e,6)^rightRotate(e,11)^rightRotate(e,25))+((e&hash[5])^((~e)&hash[6]))+k[i]+(w[i]=(i<16)?w[i]:(w[i-16]+(rightRotate(w15,7)^rightRotate(w15,18)^(w15>>>3))+w[i-7]+(rightRotate(w2,17)^rightRotate(w2,19)^(w2>>>10)))|0);
+      var temp2=(rightRotate(a,2)^rightRotate(a,13)^rightRotate(a,22))+((a&hash[1])^(a&hash[2])^(hash[1]&hash[2]));
+      hash=[(temp1+temp2)|0].concat(hash);
+      hash[4]=(hash[4]+temp1)|0;
+    }
+    for(var i=0;i<8;i++)hash[i]=(hash[i]+oldHash[i])|0;
+  }
+  for(var i=0;i<8;i++){
+    for(var j=3;j+1;j--){
+      var b=(hash[i]>>(j*8))&255;
+      result.push(b);
+    }
+  }
+  return result;
+}
+function bytesToHex(b){return b.map(function(x){return("0"+x.toString(16)).slice(-2);}).join("");}
+function decryptHex(hexStr,code){
+  var key=sha256Bytes("VALMEX-2026-KEY::"+code);
+  var bytes=[];
+  for(var i=0;i<hexStr.length;i+=2){
+    var byteVal=parseInt(hexStr.substr(i,2),16);
+    bytes.push(byteVal^key[(i/2)%key.length]);
+  }
+  return new TextDecoder("utf-8").decode(new Uint8Array(bytes));
+}
+function normalizeCode(raw){
+  var clean=raw.trim().toUpperCase().replace(/[^A-Z0-9]/g,"");
+  if(clean.length===4)return "OVNI-"+clean;
+  if(clean.indexOf("OVNI")===0&&clean.length===8)return "OVNI-"+clean.slice(4);
+  return raw.trim().toUpperCase();
+}
+
+/* Estado de sesión autenticada */
+var currentGiver="",currentTarget="",autoHideTimer=null;
+var names=PARTICIPANTES.slice().sort(function(a,b){return a.localeCompare(b,"es");});
+var inp=$("codigoInput"),vBtn=$("validarBtn"),statusEl=$("codeStatus"),btn=$("girar"),res=$("resultado"),pase=$("paseInvitado"),cv=$("wheel"),ctx=cv.getContext("2d"),rot=0,spinning=false;
 var COLORS=["#0c2333","#131d38","#0f2d2a","#1f1938"],TAU=2*Math.PI;
-names.slice().sort(function(a,b){return a.localeCompare(b,"es");}).forEach(function(n){sel.insertAdjacentHTML("beforeend","<option>"+n+"</option>");});
-function cands(){return names.filter(function(n){return n!==sel.value;});}
+
+function cands(){return names.filter(function(n){return n!==currentGiver;});}
 function mod(x){return((x%TAU)+TAU)%TAU;}
+
+/* Etiqueta compacta para que los 19 nombres luzcan impecables en la ruleta */
+function shortLabel(n){
+  return n.length>20?n.replace("Kimberly Acosta","Kimberly").replace("Jose Quintanal","Jose Q."):n;
+}
+
 function draw(){
   var dpr=window.devicePixelRatio||1,S=cv.getBoundingClientRect().width;if(!S)return;
   cv.width=cv.height=S*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
@@ -684,52 +823,112 @@ function draw(){
   list.forEach(function(n,i){
     var a=rot+i*arc;
     ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,R,a,a+arc);ctx.closePath();
-    ctx.fillStyle=COLORS[i%4];ctx.fill();ctx.lineWidth=2;ctx.strokeStyle="#00ffa333";ctx.stroke();
+    ctx.fillStyle=COLORS[i%4];ctx.fill();ctx.lineWidth=1.5;ctx.strokeStyle="#00ffa333";ctx.stroke();
     ctx.save();ctx.translate(c,c);ctx.rotate(a+arc/2);ctx.textAlign="right";ctx.textBaseline="middle";
-    ctx.fillStyle="#f2f6ff";ctx.font="700 "+(N>14?12:N>9?14:16)+"px 'Space Grotesk',system-ui,sans-serif";ctx.fillText(n,R-20,0);ctx.restore();
+    ctx.fillStyle="#f2f6ff";
+    var fontSize=S<360?10.5:S<420?11.5:12.5;
+    ctx.font="700 "+fontSize+"px 'Space Grotesk',system-ui,sans-serif";
+    ctx.fillText(shortLabel(n),R-14,0);
+    ctx.restore();
   });
 }
-sel.addEventListener("change",function(){
-  btn.disabled=!sel.value||spinning;
+
+function validateCode(){
+  if(spinning)return;
+  clearTimeout(autoHideTimer);
   res.classList.add("hide");
-  if(sel.value){
-    $("passSaludo").textContent="¡Bienvenido a bordo, "+sel.value+"!";
-    pase.classList.remove("hide");
-    beep(620,.08);
-  }else{
-    pase.classList.add("hide");
+  var code=normalizeCode(inp.value);
+  if(!code){
+    statusEl.textContent="Escribe tu código secreto (ej. OVNI-XXXX).";
+    statusEl.className="code-status err";
+    lockWheel();
+    return;
   }
+  var authHash=bytesToHex(sha256Bytes("VALMEX-2026-AUTH::"+code));
+  var entry=VAULT[authHash];
+  if(!entry){
+    statusEl.textContent="❌ Código no reconocido. Verifica tus 4 caracteres después de OVNI-.";
+    statusEl.className="code-status err";
+    beep(220,.18);
+    lockWheel();
+    return;
+  }
+  inp.value=code;
+  currentGiver=decryptHex(entry.g,code);
+  currentTarget=decryptHex(entry.r,code);
+  statusEl.textContent="✅ Código verificado para "+currentGiver+".";
+  statusEl.className="code-status ok";
+  $("passCodigo").textContent="CÓDIGO "+code;
+  $("passSaludo").textContent="¡Bienvenido a bordo, "+currentGiver+"!";
+  pase.classList.remove("hide");
+  btn.disabled=false;
+  btn.textContent="GIRAR";
+  beep(660,.09);
   draw();
+}
+
+function lockWheel(){
+  currentGiver="";
+  currentTarget="";
+  pase.classList.add("hide");
+  btn.disabled=true;
+  btn.textContent="🔒 BLOQUEADO";
+  draw();
+}
+
+vBtn.addEventListener("click",validateCode);
+inp.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();validateCode();}});
+inp.addEventListener("input",function(){
+  var norm=normalizeCode(inp.value);
+  if(norm.length===9&&VAULT[bytesToHex(sha256Bytes("VALMEX-2026-AUTH::"+norm))]){
+    validateCode();
+  }
 });
-window.addEventListener("resize",draw);window.addEventListener("load",draw);draw();
+
+window.addEventListener("resize",draw);
+window.addEventListener("load",function(){
+  draw();
+  /* Soporte para link personalizado ?c=OVNI-XXXX */
+  var params=new URLSearchParams(window.location.search);
+  var urlCode=params.get("c")||params.get("code");
+  if(urlCode){
+    inp.value=urlCode;
+    validateCode();
+  }
+});
+draw();
 
 btn.addEventListener("click",function(){
-  if(spinning||!sel.value)return;
-  var list=cands(),N=list.length,arc=TAU/N,target=assign[sel.value],k=list.indexOf(target);
-  var want=1.5*Math.PI-k*arc-arc/2+(Math.random()-.5)*arc*.6,from=rot,to=from+12*Math.PI+mod(want-from);
-  spinning=true;btn.disabled=true;sel.disabled=true;res.classList.add("hide");
+  if(spinning||!currentGiver||!currentTarget)return;
+  var list=cands(),N=list.length,arc=TAU/N,target=currentTarget,k=list.indexOf(target);
+  var want=1.5*Math.PI-k*arc-arc/2+(Math.random()-.5)*arc*.55,from=rot,to=from+12*Math.PI+mod(want-from);
+  spinning=true;btn.disabled=true;inp.disabled=true;vBtn.disabled=true;res.classList.add("hide");
   var t0=performance.now(),dur=4800,last=-1;
   (function f(now){
     var p=Math.min((now-t0)/dur,1),e=1-Math.pow(1-p,3);rot=from+(to-from)*e;draw();
-    var idx=Math.floor(mod(1.5*Math.PI-rot)/arc)%N;if(idx!==last){last=idx;beep(540,.04);}
+    var idx=Math.floor(mod(1.5*Math.PI-rot)/arc)%N;if(idx!==last){last=idx;beep(540,.035);}
     if(p<1)requestAnimationFrame(f);else fin(target);
   })(t0);
 });
+
 function fin(target){
-  spinning=false;btn.disabled=false;sel.disabled=false;
-  $("saludo").textContent="⚡ "+sel.value+", te toca personalizar el termo de:";
+  spinning=false;btn.disabled=false;inp.disabled=false;vBtn.disabled=false;
+  $("saludo").textContent="⚡ "+currentGiver+", te toca personalizar el termo de:";
   $("ganador").textContent=target;
   $("tip").textContent=TIPS[Math.floor(Math.random()*TIPS.length)];
   res.classList.remove("hide");
   beep(660,.15);setTimeout(function(){beep(920,.32);},160);
   if(typeof confetti==="function")confetti({particleCount:110,spread:80,origin:{y:.65},colors:["#00ffa3","#00d4ff","#ffb800","#ff2a85","#ffffff"]});
+  clearTimeout(autoHideTimer);
+  autoHideTimer=setTimeout(function(){$("ocultar").click();},45000);
 }
+
 $("ocultar").addEventListener("click",function(){
+  clearTimeout(autoHideTimer);
   res.classList.add("hide");
-  pase.classList.add("hide");
-  sel.value="";
-  btn.disabled=true;
-  draw();
+  inp.value="";
+  statusEl.textContent="";
+  lockWheel();
 });
 </script>
 </body>
