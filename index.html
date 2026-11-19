@@ -577,7 +577,7 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
         <div class="reveal">
           <small id="saludo">Objetivo asignado</small>
           <strong id="ganador">Nombre</strong>
-          <div class="tip"><b>💡 Hack para personalizar su termo</b><span id="tip"></span></div>
+          <div class="tip"><b id="tipTitulo">🛸 Perfil cósmico para su termo</b><span id="tip"></span></div>
           <span class="auto-hide-msg" id="autoHideMsg">Por seguridad, esta pantalla se ocultará automáticamente en 45 s.</span>
           <button class="btn ghost" id="ocultar" style="margin-top:14px">🙈 Ocultar y bloquear ahora</button>
         </div>
@@ -650,13 +650,27 @@ var VAULT={
 };
 
 var REGLAS=["🥤 Exclusivo: Termo personalizado","🎁 Entregar envuelto el viernes 27 a las 4:00 PM","🤫 Misión 100% confidencial"];
-var TIPS=[
-  "Investiga si es team café caliente o bebidas frías y busca un termo con tapa hermética antiderrame.",
-  "Grábale su nombre o apodo junto a un ícono de su deporte, serie o hobby favorito.",
-  "Ponle en vinil esa frase clásica que siempre repite en las juntas o en el chat.",
-  "Ármale un collage con stickers resistentes al agua de sus bandas, viajes o gustos culposos.",
-  "Un termo en su color favorito con sus iniciales en tipografía brutalista nunca falla."
-];
+var FRASES_PERSONA={
+  "Roberto Cano (Bob)":"Si lleva la firma de Bob, ese termo tiene que aguantar desde el primer café de la mañana hasta el cierre de mercado sin perder ni un grado.",
+  "Kimberly Acosta (Kim)":"Para Kim el termo tiene que tener tanto estilo y buena vibra como ella: prohibido un diseño aburrido, ¡que brille en cada junta!",
+  "Jose Quintanal (Chema)":"Un termo digno del gran Chema: fiel compañero de batallas financieras, listo para recargar energía entre llamadas y cierres épicos.",
+  "Rosa Maria (Rosy)":"Para Rosy, un termo que transmita su calidez y alegría en la oficina: que cada sorbo le saque una sonrisa en pleno día de trabajo.",
+  "Kari Ruiz":"Kari merece un termo con mucha personalidad, a prueba de días intensos y con todo el flow para acompañarla en la oficina.",
+  "Mar Lopez":"Como su nombre lo dice, para Mar se necesita una ola de creatividad: un termo fresco, único y con toda la actitud.",
+  "Andric Zarate":"Te tocó el arquitecto de esta misión OVNI: sorpréndelo con un termo fuera de este planeta que esté al nivel de la ruleta cósmica.",
+  "Sara Reyes (Sarita)":"Para Sarita, un termo lleno de buena onda y detalles lindos que le alegre las mañanas desde el primer sorbito.",
+  "Arturo":"Para Arturo, un termo todoterreno de calibre ejecutivo: elegante, resistente y siempre listo para entrar en acción.",
+  "Allende":"Un termo con carácter y sello único para Allende: que se note a kilómetros en la sala de juntas quién es el dueño.",
+  "Karina Beristain":"Para Karina, combina estilo, actitud y un toque creativo: un termo que robe miradas en cada escritorio de VALMEX.",
+  "Santiago Sanchez":"Para Santiago, un diseño ganador y con toda la pila: ideal para mantener el ritmo de campeón durante toda la jornada.",
+  "Fernando":"Para Fernando, un termo implacable y con mucha presencia: cero fugas, máxima actitud y 100% personalizado.",
+  "Fabian":"Para Fabian, arma un diseño con chispa y buen humor que haga que hasta el lunes más pesado empiece con toda la actitud.",
+  "Bruno":"Un termo con todo el sello de Bruno: auténtico, práctico y listo para acompañarlo en cada jugada maestra del día.",
+  "Daniel":"Para Daniel, un termo pensado al detalle: funcional, con mucho estilo y digno de un crack del equipo.",
+  "Angie":"Para Angie, un termo lleno de energía positiva y diseño increíble que haga match con su buena vibra de todos los días.",
+  "Angel":"Como su nombre lo indica, un termo celestial para Angel: que mantenga su bebida perfecta de principio a fin del día.",
+  "Juan Carlos":"Para Juan Carlos, un clásico instantáneo con mucha personalidad: un termo que imponga respeto y buen gusto en cada junta."
+};
 /* ===================================== */
 function $(i){return document.getElementById(i);}
 
@@ -915,7 +929,8 @@ function fin(target){
   spinning=false;btn.disabled=false;inp.disabled=false;vBtn.disabled=false;
   $("saludo").textContent="⚡ "+currentGiver+", te toca personalizar el termo de:";
   $("ganador").textContent=target;
-  $("tip").textContent=TIPS[Math.floor(Math.random()*TIPS.length)];
+  $("tipTitulo").textContent="🛸 Pista cósmica sobre "+target;
+  $("tip").textContent=FRASES_PERSONA[target]||"Un termo único y con toda la actitud para sorprender en el intercambio.";
   res.classList.remove("hide");
   beep(660,.15);setTimeout(function(){beep(920,.32);},160);
   if(typeof confetti==="function")confetti({particleCount:110,spread:80,origin:{y:.65},colors:["#00ffa3","#00d4ff","#ffb800","#ff2a85","#ffffff"]});
