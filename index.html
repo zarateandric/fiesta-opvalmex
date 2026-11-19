@@ -41,14 +41,15 @@ h2{font-size:clamp(1.75rem,4.2vw,2.6rem)}
 @keyframes marquee{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-100%,0,0)}}
 @keyframes gradientMove{0%{background-position:0% 50%}100%{background-position:300% 50%}}
 nav{position:sticky;top:0;z-index:30;background:#04060bd9;backdrop-filter:blur(14px);border-bottom:1px solid #00ffa329}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:flex;align-items:center;gap:10px;font-family:"Syne",sans-serif;font-weight:800;font-size:1rem;letter-spacing:.02em}
-.brand-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent),0 0 24px var(--accent)}
-nav a{color:var(--muted);text-decoration:none;font-size:.9rem;margin-left:20px;font-weight:600;transition:color .2s}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:64px;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Syne",sans-serif;font-weight:800;font-size:1rem;letter-spacing:.02em;text-align:left;min-width:0}
+.brand-dot{flex:none;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent),0 0 24px var(--accent)}
+nav .nav-links{display:flex;align-items:center;flex:none}
+nav a{color:var(--muted);text-decoration:none;font-size:.9rem;margin-left:20px;font-weight:600;transition:color .2s;white-space:nowrap}
 nav a:hover{color:var(--accent)}
-nav a.pill{color:#04120c;background:linear-gradient(135deg,var(--accent),var(--cyber));padding:9px 18px;border-radius:999px;font-weight:700;box-shadow:0 0 22px #00ffa355;transition:transform .15s,box-shadow .15s}
+nav a.pill{color:#04120c;background:linear-gradient(135deg,var(--accent),var(--cyber));padding:9px 18px;border-radius:999px;font-weight:700;box-shadow:0 0 22px #00ffa355;transition:transform .15s,box-shadow .15s;margin-left:14px}
 nav a.pill:hover{transform:translateY(-2px);box-shadow:0 0 32px #00ffa399;color:#04120c}
-@media(max-width:640px){nav a:not(.pill){display:none}}
+@media(max-width:679px){nav a:not(.pill){display:none}nav a.pill{margin-left:0}}
 .hero{padding:52px 0 36px;position:relative}
 .hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
 .badge-row{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,#00ffa31a,#00d4ff1a);border:1px solid #00ffa366;padding:7px 18px;border-radius:999px;margin-bottom:20px;font-size:.8rem;color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 0 24px #00ffa322}
@@ -159,6 +160,9 @@ footer{padding:34px 0 calc(52px + env(safe-area-inset-bottom,0px));text-align:ce
 }
 @media(max-width:679px){
   section{padding:38px 0}
+  nav .wrap{min-height:56px}
+  .brand{font-size:.82rem;gap:7px}
+  nav a.pill{padding:7px 13px;font-size:.78rem}
   .hero{padding:34px 0 24px}
   .hero h1{font-size:clamp(1.85rem,7.5vw,2.6rem)}
   .lead{font-size:.98rem;padding:0 4px}
@@ -181,10 +185,11 @@ footer{padding:34px 0 calc(52px + env(safe-area-inset-bottom,0px));text-align:ce
 }
 @media(max-width:359px){
   /* Pantallas ultra angostas como Galaxy Z Fold cerrado (280px - 340px) */
-  .wrap{padding:0 12px}
-  nav .wrap{height:56px}
-  .brand{font-size:.82rem;gap:6px}
-  nav a.pill{padding:7px 11px;font-size:.76rem}
+  .wrap{padding:0 10px}
+  nav .wrap{min-height:52px;gap:6px}
+  .brand{font-size:.72rem;gap:5px}
+  .brand-short{display:none}
+  nav a.pill{padding:6px 10px;font-size:.72rem}
   .badge-row,.signal-pill{font-size:.68rem;padding:5px 12px}
   .hero h1{font-size:1.65rem}
   .meta-pill,.chip{font-size:.78rem;padding:6px 12px}
@@ -209,8 +214,8 @@ footer{padding:34px 0 calc(52px + env(safe-area-inset-bottom,0px));text-align:ce
 
 <nav>
   <div class="wrap">
-    <div class="brand"><span class="brand-dot"></span> VALMEX · OVNI MISSION 2026</div>
-    <div><a href="#dinamica">La dinámica</a><a class="pill" href="#ruleta">🔐 Ingresar código</a></div>
+    <div class="brand"><span class="brand-dot"></span><span>VALMEX <span class="brand-short">· OVNI MISSION 2026</span></span></div>
+    <div class="nav-links"><a href="#dinamica">La dinámica</a><a class="pill" href="#ruleta">🔐 Ingresar código</a></div>
   </div>
 </nav>
 
