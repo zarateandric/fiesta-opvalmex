@@ -202,7 +202,6 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
 
 <section id="ruleta">
   <div class="wrap">
-    <div class="eyebrow">Asignación encriptada SHA-256</div>
     <h2>La ruleta abductora</h2>
     <div class="roulette">
       <p class="muted" style="margin:0;font-size:1.02rem">Ingresa tu <b style="color:var(--accent)">código secreto personal</b> para activar el reactor de la ruleta.</p>
@@ -235,13 +234,13 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
 <section id="proximamente">
   <div class="wrap">
     <div class="classified-box">
-      <div class="signal-pill"><span class="signal-dot"></span> Señal interceptada · Nivel de acceso 02</div>
+      <div class="signal-pill"><span class="signal-dot"></span> Transmisión clasificada · Nivel de acceso 02</div>
       <h2 class="classified-title">El termo es solo la <span>Fase 1 de la abducción</span></h2>
-      <p class="lead" style="margin-bottom:14px">Los radares de Operadora VALMEX detectan más anomalías acercándose al viernes 27 de noviembre. Esta página se irá desbloqueando conforme nos acerquemos al aterrizaje.</p>
+      <p class="lead" style="margin-bottom:14px">Los radares de Operadora VALMEX detectan coordenadas ocultas para el viernes 27 de noviembre. Lo que ocurrirá después del intercambio permanece bajo estricto secreto galáctico.</p>
       <div class="radar-bar" aria-hidden="true"><div class="radar-fill"></div></div>
-      <div class="radar-meta"><span>Progreso de la misión: <b>Fase 1 / 4 activa</b></span><span>Desencriptando archivos...</span></div>
+      <div class="radar-meta"><span>Estado del sistema: <b>Fase 1 activa</b></span><span>Archivos siguientes: <b>[CLASIFICADO]</b></span></div>
       <div class="teasers" id="teasersBox"></div>
-      <p class="note" style="margin-top:24px;color:#b8c7e6">📡 <b>Mantente atento al canal oficial:</b> pronto se activará el módulo de votaciones y los equipos de combate en este mismo link.</p>
+      <p class="note" style="margin-top:24px;color:#b8c7e6">📡 <b>Mantente en sintonía:</b> nuevas transmisiones y sorpresas se desbloquearán sin previo aviso conforme se acerque el aterrizaje.</p>
     </div>
   </div>
 </section>
@@ -252,7 +251,7 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
 <script>
 !function(){
   var $=function(i){return document.getElementById(i);};
-  var CFG={lugar:"Taquería Ovnis, Polanco, CDMX",fecha:"Viernes 27 de noviembre de 2026",hora:"16:00 hrs (4:00 PM)",iso:"2026-11-27T16:00:00-06:00",vest:"Casual y cómoda"};
+  var CFG={lugar:"Taquería Ovnis",fecha:"Viernes 27 de noviembre de 2026",hora:"16:00 hrs (4:00 PM)",iso:"2026-11-27T16:00:00-06:00"};
 
   /* Escudo anti-inspección (bloquea clic derecho, F12, Ctrl+U, Ctrl+Shift+I/J/C) */
   var toastT;
@@ -273,14 +272,13 @@ footer{padding:34px 0 52px;text-align:center;color:var(--muted);border-top:1px s
   var DB=uPayload(_P),PARTICIPANTES=DB.p,VAULT=DB.v,FRASES=DB.f;
 
   /* Construcción dinámica compacta de UI */
-  var tItems="<span>🛸 MISIÓN CLASIFICADA · OPERADORA VALMEX 2026</span><span>🥤 INTERCAMBIO DE TERMOS PERSONALIZADOS</span><span>🌮 VIERNES 27 NOV · 16:00 HRS · TAQUERÍA OVNIS</span><span>🚫 TAZAS Y CALCETINES ESTRICTAMENTE VETADOS</span>";
+  var tItems="<span>🛸 MISIÓN CLASIFICADA · OPERADORA VALMEX 2026</span><span>🥤 INTERCAMBIO DE TERMOS PERSONALIZADOS</span><span>🌮 VIERNES 27 NOV · 16:00 HRS · TAQUERÍA OVNIS</span>";
   $("ticker").innerHTML='<div class="ticker-track">'+tItems+'</div><div class="ticker-track">'+tItems+'</div>';
-  [["📅",CFG.fecha],["🕓",CFG.hora],["📍",CFG.lugar],["👕",CFG.vest]].forEach(function(x){$("metaPills").insertAdjacentHTML("beforeend",'<span class="meta-pill">'+x[0]+" "+x[1]+"</span>");});
-  [["🔐","Ingresa tu código secreto","Escribe tu código personal (OVNI-XXXX) abajo para identificarte automáticamente y desbloquear la ruleta."],["🔥","Personaliza el termo","Grabado láser, vinil o stickers waterproof con su frase de oficina, hobby, equipo o color favorito."],["🎁","Llévalo envuelto","El viernes 27 a las 4:00 PM abriremos los termos en la fiesta y adivinaremos quién diseñó cada uno."]].forEach(function(s){$("stepsBox").insertAdjacentHTML("beforeend",'<div class="step"><div class="step-ico">'+s[0]+'</div><div class="step-head">'+s[1]+"</div><p>"+s[2]+"</p></div>");});
-  ["🥤 Exclusivo: Termo personalizado","💸 Presupuesto libre","🎁 Entregar envuelto el viernes 27 a las 4:00 PM","🤫 Misión 100% confidencial"].forEach(function(t){$("reglas").insertAdjacentHTML("beforeend",'<span class="chip">'+t+"</span>");});
-  $("reglas").insertAdjacentHTML("beforeend",'<span class="chip no">🚫 Tazas y calcetines, vetados de esta galaxia</span>');
-  [["X-02","⚡","Duelo de Escuadrones",'Dos bandos, rondas relámpago estilo <span class="redact">100 Mexicanos Dijeron</span> y batallas de <span class="redact">dibujo contrarreloj</span> donde nadie está a salvo.'],["X-03","🏆","The VALMEX Awards",'La premiación más esperada del año: votaciones secretas para coronar al <span class="redact">Mejor Excel</span>, <span class="redact">Alma de la Fiesta</span> y más leyendas.'],["X-04","🌮","Combustible Intergaláctico",'Aterrizaje forzoso a las 4:00 PM en <span class="redact">Taquería Ovnis Polanco</span> con tacos ilimitados, brindis y sorpresas fuera de órbita.']].forEach(function(x){$("teasersBox").insertAdjacentHTML("beforeend",'<div class="teaser" onclick="this.classList.toggle(\'peek\')"><span class="teaser-lock">🔒 Expediente '+x[0]+'</span><div class="teaser-ico">'+x[1]+"</div><h3>"+x[2]+"</h3><p>"+x[3]+'</p><span class="teaser-hint">👆 Pasa el cursor o toca para espiar</span></div>');});
-  $("pie").innerHTML="🛸 Operadora VALMEX · Área Comercial · "+CFG.fecha+" · "+CFG.hora+" · "+CFG.lugar;
+  [["📅",CFG.fecha],["🕓",CFG.hora],["📍",CFG.lugar]].forEach(function(x){$("metaPills").insertAdjacentHTML("beforeend",'<span class="meta-pill">'+x[0]+" "+x[1]+"</span>");});
+  [["🔐","Ingresa tu código secreto","Escribe tu código personal (OVNI-XXXX) abajo para identificarte automáticamente y desbloquear la ruleta."],["🔥","Personaliza el termo","Grabado láser, vinil o stickers waterproof con su frase de oficina, hobby, equipo o color favorito."],["🎁","Llévalo listo para sorprender","El viernes 27 de noviembre entregaremos los termos en la fiesta y descubriremos quién diseñó cada uno."]].forEach(function(s){$("stepsBox").insertAdjacentHTML("beforeend",'<div class="step"><div class="step-ico">'+s[0]+'</div><div class="step-head">'+s[1]+"</div><p>"+s[2]+"</p></div>");});
+  ["🥤 Exclusivo: Termo personalizado","🎁 Entrega: el viernes 27 en la fiesta","🤫 Misión 100% confidencial"].forEach(function(t){$("reglas").insertAdjacentHTML("beforeend",'<span class="chip">'+t+"</span>");});
+  [["X-02","🛸","Anomalía en Acercamiento",'Coordenadas bloqueadas. Una <span class="redact">dinámica sorpresa</span> pondrá a prueba a toda la tripulación durante el aterrizaje.'],["X-03","🔮","Protocolo Confidencial",'Acceso restringido hasta nuevo aviso. Solo sabemos que habrá <span class="redact">momentos épicos</span> y <span class="redact">sorpresas clasificadas</span>.'],["X-04","🌌","Transmisión Final",'Señal encriptada desde <span class="redact">Taquería Ovnis</span>. Prepárate para una tarde fuera de este planeta para cerrar el 2026.']].forEach(function(x){$("teasersBox").insertAdjacentHTML("beforeend",'<div class="teaser" onclick="this.classList.toggle(\'peek\')"><span class="teaser-lock">🔒 Expediente '+x[0]+'</span><div class="teaser-ico">'+x[1]+"</div><h3>"+x[2]+"</h3><p>"+x[3]+'</p><span class="teaser-hint">👆 Pasa el cursor o toca para desencriptar pista</span></div>');});
+  $("pie").innerHTML="🛸 Operadora VALMEX · "+CFG.fecha+" · "+CFG.hora+" · "+CFG.lugar;
   $("cdSub").textContent=CFG.fecha+" · "+CFG.hora;
 
   /* Fondo de estrellas con destellos */
