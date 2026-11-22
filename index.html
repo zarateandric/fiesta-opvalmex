@@ -89,7 +89,11 @@ nav a.pill:hover{transform:translateY(-2px);box-shadow:0 0 32px #00ffa399;color:
 .step p{margin:0;color:var(--muted);font-size:.94rem}
 .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
 .chip{border:1px solid #273a60;background:rgba(17,25,44,.85);border-radius:999px;padding:8px 18px;font-size:.88rem;font-weight:600}
+.chip.hl{border-color:var(--accent);background:rgba(0,255,163,.12);color:var(--accent);box-shadow:0 0 22px #00ffa328}
 .chip.no{border-color:#ff2a8588;background:rgba(255,42,133,.1);color:#ff8ab8;box-shadow:0 0 20px #ff2a8522}
+.custom-box{max-width:760px;margin:22px auto 0;background:linear-gradient(135deg,rgba(0,255,163,.09),rgba(0,212,255,.08));border:1px solid #00ffa355;border-radius:20px;padding:18px 24px;text-align:center;box-shadow:0 10px 34px #0006,0 0 28px #00ffa314}
+.custom-box b{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-family:"Syne",sans-serif;font-size:1.02rem;margin-bottom:6px}
+.custom-box p{margin:0;color:#d6e4ff;font-size:.94rem}
 .roulette{position:relative;background:radial-gradient(circle at 50% 35%,#00ffa318 0%,transparent 55%),linear-gradient(180deg,rgba(17,25,44,.95),rgba(6,9,17,.98));border:1px solid #00ffa355;border-radius:30px;padding:38px 22px;text-align:center;box-shadow:0 24px 80px #000c,0 0 60px #00ffa31a;overflow:hidden;margin-top:16px}
 .picker{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin:22px auto 12px;max-width:640px}
 .code-box{display:flex;align-items:center;gap:8px;background:#0d1526;border:2px solid var(--accent);border-radius:16px;padding:6px 8px 6px 16px;box-shadow:0 0 25px #00ffa32b;transition:border-color .2s,box-shadow .2s}
@@ -251,6 +255,10 @@ footer{padding:34px 0 calc(52px + env(safe-area-inset-bottom,0px));text-align:ce
     <div class="eyebrow">Protocolo del intercambio</div>
     <h2>3 pasos para completar la misión</h2>
     <div class="steps" id="stepsBox"></div>
+    <div class="custom-box">
+      <b>✨ Contenido 100% libre y a tu discreción</b>
+      <p>Con un presupuesto de <strong style="color:var(--accent2)">$300 a $400 MXN</strong>, tú eliges libremente qué productos poner dentro de la cajita o canasta (dulces, botanas, chucherías o cualquier detalle), siempre y cuando la personalices y sientas que define o representa a la persona que te tocó.</p>
+    </div>
     <div class="chips" id="reglas"></div>
   </div>
 </section>
@@ -330,8 +338,8 @@ footer{padding:34px 0 calc(52px + env(safe-area-inset-bottom,0px));text-align:ce
   var tItems="<span>🛸 MISIÓN CLASIFICADA · OPERADORA VALMEX 2026</span><span>🧺 INTERCAMBIO DE CANASTAS PERSONALIZADAS</span><span>🌮 VIERNES 27 NOV · 16:00 HRS · TAQUERÍA OVNIS</span>";
   $("ticker").innerHTML='<div class="ticker-track">'+tItems+'</div><div class="ticker-track">'+tItems+'</div>';
   [["📅",CFG.fecha],["🕓",CFG.hora],["📍",CFG.lugar]].forEach(function(x){$("metaPills").insertAdjacentHTML("beforeend",'<span class="meta-pill">'+x[0]+" "+x[1]+"</span>");});
-  [["🔐","Ingresa tu código secreto","Escribe tu código personal (OVNI-XXXX) abajo para identificarte automáticamente y desbloquear la ruleta."],["🧺","Arma su canasta personalizada","Llénala con sus dulces, chucherías, snacks o cualquier detalle especial que te recuerde a esa persona."],["🎁","Llévala lista para sorprender","El viernes 27 de noviembre entregaremos las canastas en la fiesta y descubriremos quién armó cada una."]].forEach(function(s){$("stepsBox").insertAdjacentHTML("beforeend",'<div class="step"><div class="step-ico">'+s[0]+'</div><div class="step-head">'+s[1]+"</div><p>"+s[2]+"</p></div>");});
-  ["🧺 Exclusivo: Canasta de regalo personalizada","🎁 Entrega: el viernes 27 en la fiesta","🤫 Misión 100% confidencial"].forEach(function(t){$("reglas").insertAdjacentHTML("beforeend",'<span class="chip">'+t+"</span>");});
+  [["🔐","Ingresa tu código secreto","Escribe tu código personal (OVNI-XXXX) abajo para identificarte automáticamente y desbloquear la ruleta."],["🧺","Arma su cajita o canasta","Presupuesto de $300 a $400 MXN. Los productos son a tu total discreción: llénala con dulces, chucherías o detalles que sientas que definen a esa persona."],["🎁","Llévala lista para sorprender","El viernes 27 de noviembre entregaremos las canastas en la fiesta y descubriremos quién armó cada una."]].forEach(function(s){$("stepsBox").insertAdjacentHTML("beforeend",'<div class="step"><div class="step-ico">'+s[0]+'</div><div class="step-head">'+s[1]+"</div><p>"+s[2]+"</p></div>");});
+  [["💰 Presupuesto: $300 – $400 MXN","hl"],["🧺 Productos libres: que definan a tu amigo secreto",""],["🎁 Entrega: el viernes 27 en la fiesta",""],["🤫 Misión 100% confidencial",""]].forEach(function(t){$("reglas").insertAdjacentHTML("beforeend",'<span class="chip'+(t[1]?" "+t[1]:"")+'">'+t[0]+"</span>");});
   [["X-02","🛸","Anomalía en Acercamiento",'Coordenadas bloqueadas. Una <span class="redact">dinámica sorpresa</span> pondrá a prueba a toda la tripulación durante el aterrizaje.'],["X-03","🔮","Protocolo Confidencial",'Acceso restringido hasta nuevo aviso. Solo sabemos que habrá <span class="redact">momentos épicos</span> y <span class="redact">sorpresas clasificadas</span>.'],["X-04","🌌","Transmisión Final",'Señal encriptada desde <span class="redact">Taquería Ovnis</span>. Prepárate para una tarde fuera de este planeta para cerrar el 2026.']].forEach(function(x){$("teasersBox").insertAdjacentHTML("beforeend",'<div class="teaser" onclick="this.classList.toggle(\'peek\')"><span class="teaser-lock">🔒 Expediente '+x[0]+'</span><div class="teaser-ico">'+x[1]+"</div><h3>"+x[2]+"</h3><p>"+x[3]+'</p><span class="teaser-hint">👆 Pasa el cursor o toca para desencriptar pista</span></div>');});
   $("pie").innerHTML="🛸 Operadora VALMEX · "+CFG.fecha+" · "+CFG.hora+" · "+CFG.lugar;
   $("cdSub").textContent=CFG.fecha+" · "+CFG.hora;
