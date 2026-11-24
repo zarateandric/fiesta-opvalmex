@@ -95,32 +95,32 @@ nav a.pill:hover{transform:translateY(-2px);box-shadow:0 0 32px #00ffa399;color:
 .custom-box b{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-family:"Syne",sans-serif;font-size:1.02rem;margin-bottom:6px}
 .custom-box p{margin:0;color:#d6e4ff;font-size:.94rem}
 
-/* Laboratorio de Abducción: Canasta VALMEX interactiva siendo succionada por un OVNI */
-.abduct-card{position:relative;background:radial-gradient(circle at 50% 10%,#00ffa324 0%,#00d4ff12 38%,transparent 70%),linear-gradient(180deg,rgba(14,22,40,.95),rgba(7,11,21,.98));border:1px solid #00ffa355;border-radius:30px;padding:36px 22px 32px;overflow:hidden;box-shadow:0 24px 80px #000c,0 0 60px #00ffa318;margin-top:16px}
-.abduct-scene{position:relative;max-width:680px;margin:18px auto 0;padding:10px 0 6px;display:flex;flex-direction:column;align-items:center}
-.abduct-ufo{width:190px;position:relative;z-index:5;animation:ufoHover 3.2s ease-in-out infinite!important;filter:drop-shadow(0 12px 28px #00ffa366)}
+/* Laboratorio de Abducción 3D: Canasta real decorada con regalos adentro siendo abducida por un OVNI */
+.abduct-card{position:relative;background:radial-gradient(circle at 50% 8%,#00ffa326 0%,#00d4ff14 40%,transparent 72%),linear-gradient(180deg,rgba(12,20,38,.96),rgba(6,9,18,.99));border:1px solid #00ffa355;border-radius:30px;padding:34px 18px 30px;overflow:hidden;box-shadow:0 24px 80px #000c,0 0 60px #00ffa318;margin-top:16px}
+.abduct-scene{position:relative;max-width:660px;margin:8px auto 0;display:flex;flex-direction:column;align-items:center;perspective:1100px}
+.abduct-ufo{width:min(52vw,210px);position:relative;z-index:6;animation:ufoHover 3.2s ease-in-out infinite!important;filter:drop-shadow(0 14px 30px #00ffa377)}
 @keyframes ufoHover{50%{transform:translateY(-10px) rotate(-1.5deg)}}
-.tractor-cone{position:relative;width:100%;max-width:640px;margin-top:-18px;padding:44px 18px 26px;display:flex;flex-direction:column;align-items:center;z-index:2}
-.tractor-cone::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(0,255,163,.34) 0%,rgba(0,212,255,.15) 52%,rgba(255,42,133,.06) 86%,transparent 100%);clip-path:polygon(30% 0%,70% 0%,100% 100%,0% 100%)}
-.tractor-rings{position:absolute;inset:0;pointer-events:none;z-index:1;clip-path:polygon(30% 0%,70% 0%,100% 100%,0% 100%);background:repeating-linear-gradient(180deg,transparent 0 22px,rgba(0,255,163,.18) 22px 25px);animation:beamUp 1.8s linear infinite!important}
-@keyframes beamUp{0%{background-position:0 50px}100%{background-position:0 0}}
-.loot-cloud{position:relative;z-index:4;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:100%;max-width:560px;margin:6px auto 14px}
-.loot-item{position:relative;background:linear-gradient(145deg,rgba(19,31,56,.94),rgba(10,16,30,.96));border:1.5px solid #2b4570;border-radius:18px;padding:12px 8px 10px;color:var(--text);font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;box-shadow:0 10px 25px #0009,0 0 18px #00ffa31a;animation:suctionFloat 3.4s ease-in-out infinite!important;animation-delay:var(--d,0s);transition:border-color .2s,box-shadow .2s,background .2s}
-.loot-item:nth-child(even){animation-duration:3.9s!important}
-@keyframes suctionFloat{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-11px) rotate(2deg) scale(1.03)}}
-.loot-item:hover,.loot-item.active{border-color:var(--accent);background:linear-gradient(145deg,#152c44,#0d1b2e);box-shadow:0 0 28px #00ffa366,inset 0 0 14px #00ffa322}
-.loot-item.beam-shot{animation:abductPulse .55s cubic-bezier(.18,.89,.32,1.28)!important}
-@keyframes abductPulse{0%{transform:scale(1)}40%{transform:translateY(-22px) scale(1.14) rotate(4deg);box-shadow:0 0 45px #00ffa3}100%{transform:translateY(-6px) scale(1.04)}}
-.loot-ico{font-size:1.85rem;line-height:1;filter:drop-shadow(0 4px 10px #00ffa344)}
-.loot-lbl{font-size:.78rem;font-weight:700;color:#e6f0ff;line-height:1.15}
-.loot-tag{font-size:.63rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:700;opacity:.85}
-.valmex-basket{position:relative;z-index:4;width:min(92%,420px);margin:-6px auto 0;background:linear-gradient(180deg,#16243b,#0c1424);border:2px solid var(--accent);border-radius:18px 18px 34px 34px;padding:16px 18px 18px;box-shadow:0 16px 40px #000c,0 0 38px #00ffa338;animation:basketLift 3.8s ease-in-out infinite!important}
-@keyframes basketLift{50%{transform:translateY(-7px)}}
-.valmex-basket::before{content:"";position:absolute;top:-12px;left:12%;right:12%;height:12px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--cyber),var(--magenta),var(--accent2));box-shadow:0 0 18px var(--accent)}
-.basket-mesh{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:.16;background-image:repeating-linear-gradient(45deg,#00ffa3 0 1px,transparent 1px 12px),repeating-linear-gradient(-45deg,#00d4ff 0 1px,transparent 1px 12px)}
-.basket-badge{position:relative;display:inline-flex;align-items:center;gap:8px;background:#060a12e6;border:1px solid #00ffa377;border-radius:999px;padding:5px 14px;font-family:"Syne",sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;box-shadow:0 0 18px #00ffa333}
-.basket-sub{position:relative;display:block;margin-top:6px;font-size:.8rem;color:#bfd0ee;font-weight:600}
-.loot-msg-box{max-width:580px;margin:18px auto 0;background:linear-gradient(160deg,#122238,#0a1220);border:1.5px solid var(--cyber);border-radius:20px;padding:18px 22px;box-shadow:0 12px 36px #0009,0 0 30px #00d4ff2b;transition:transform .25s,border-color .25s}
+.basket-3d-stage{position:relative;width:100%;max-width:600px;margin-top:-26px;z-index:4;transform-style:preserve-3d;transition:transform .25s ease-out}
+.basket-3d-svg{width:100%;height:auto;display:block;overflow:visible;filter:drop-shadow(0 26px 45px #000d)}
+.b3d-beam{animation:beamPulse3d 2.4s ease-in-out infinite!important;transform-origin:300px 0}
+@keyframes beamPulse3d{50%{opacity:.72}}
+.b3d-ring{animation:ringRise 2.4s linear infinite!important}
+.b3d-ring.r2{animation-delay:.8s!important}
+.b3d-ring.r3{animation-delay:1.6s!important}
+@keyframes ringRise{0%{transform:translateY(50px) scaleX(1.08);opacity:0}30%{opacity:.75}100%{transform:translateY(-150px) scaleX(.65);opacity:0}}
+.b3d-basket-all{animation:basketLevitate 3.8s ease-in-out infinite!important;transform-origin:300px 280px}
+@keyframes basketLevitate{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-13px) rotate(1.2deg)}}
+.b3d-item{cursor:pointer;transform-box:fill-box;transform-origin:center bottom;animation:itemFloat3d 3.2s ease-in-out infinite!important;animation-delay:var(--d,0s);transition:filter .22s}
+.b3d-item:nth-child(even){animation-duration:3.7s!important}
+@keyframes itemFloat3d{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-11px) rotate(2deg)}}
+.b3d-item:hover,.b3d-item.active{filter:drop-shadow(0 0 18px #00ffa3) drop-shadow(0 0 30px #00d4ff) brightness(1.12)}
+.b3d-item.suck{animation:suckUp3d .65s cubic-bezier(.18,.89,.32,1.28)!important}
+@keyframes suckUp3d{0%{transform:translateY(0) scale(1)}40%{transform:translateY(-38px) scale(1.14) rotate(5deg)}100%{transform:translateY(-10px) scale(1.05)}}
+.b3d-badge{pointer-events:none;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:10.5px;fill:#f2f6ff;letter-spacing:.03em}
+.loot-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:600px;margin:6px auto 0;position:relative;z-index:5}
+.loot-pill{background:rgba(13,21,38,.9);border:1px solid #28406b;color:#d6e4ff;border-radius:999px;padding:6px 13px;font:700 .78rem "Space Grotesk",sans-serif;cursor:pointer;transition:all .18s}
+.loot-pill:hover,.loot-pill.active{border-color:var(--accent);background:rgba(0,255,163,.14);color:var(--accent);box-shadow:0 0 18px #00ffa333;transform:translateY(-2px)}
+.loot-msg-box{max-width:580px;margin:16px auto 0;background:linear-gradient(160deg,#122238,#0a1220);border:1.5px solid var(--cyber);border-radius:20px;padding:18px 22px;box-shadow:0 12px 36px #0009,0 0 30px #00d4ff2b;transition:transform .25s,border-color .25s;position:relative;z-index:5}
 .loot-msg-box.pop{animation:pop .35s cubic-bezier(.18,.89,.32,1.28)}
 .loot-msg-head{display:flex;align-items:center;justify-content:center;gap:8px;font-family:"Syne",sans-serif;font-weight:800;font-size:1.05rem;color:var(--accent);margin-bottom:6px}
 .loot-msg-txt{margin:0;font-size:.95rem;color:#e3edff}
@@ -300,44 +300,240 @@ footer{padding:34px 0 calc(52px + env(safe-area-inset-bottom,0px));text-align:ce
 
 <section id="inspiracion">
   <div class="wrap">
-    <div class="eyebrow">Laboratorio de abducción · $300 a $400 MXN</div>
-    <h2>¿Qué puedes meter en tu canasta?</h2>
-    <p class="lead" style="margin-bottom:8px">Nuestra canasta oficial de Operadora VALMEX está siendo abducida junto con varias ideas de regalos. <b>Toca o haz clic en cada objeto flotante</b> para interceptar su mensaje secreto.</p>
+    <div class="eyebrow">Laboratorio de abducción 3D · $300 a $400 MXN</div>
+    <h2>Así puede lucir tu canasta personalizada</h2>
+    <p class="lead" style="margin-bottom:8px">Explora esta réplica 3D de una mini canasta decorada por Operadora VALMEX siendo abducida con todo y regalos. <b>Haz clic directamente sobre cada regalo dentro de la canasta</b> para descubrir su mensaje.</p>
 
-    <div class="abduct-card">
+    <div class="abduct-card" id="abductCard">
       <div class="abduct-scene">
-        <!-- OVNI Abductor Superior -->
+        <!-- OVNI Abductor 3D Superior -->
         <div class="abduct-ufo" aria-hidden="true">
-          <svg viewBox="0 0 180 100" width="100%" height="auto">
+          <svg viewBox="0 0 200 105" width="100%" height="auto">
             <defs>
               <linearGradient id="aB" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00ffa3"/><stop offset="50%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#ff2a85"/></linearGradient>
               <linearGradient id="aD" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff" stop-opacity=".95"/><stop offset="100%" stop-color="#00d4ff" stop-opacity=".35"/></linearGradient>
+              <radialGradient id="aCore" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff"/><stop offset="45%" stop-color="#00ffa3"/><stop offset="100%" stop-color="#00ffa3" stop-opacity="0"/></radialGradient>
             </defs>
-            <ellipse cx="90" cy="64" rx="42" ry="11" fill="#00ffa3" opacity=".55"/>
-            <path d="M52 50 C52 18,128 18,128 50 Z" fill="url(#aD)" stroke="#7df9ff" stroke-width="1.5"/>
-            <ellipse cx="90" cy="52" rx="80" ry="19" fill="url(#aB)" stroke="#07101e" stroke-width="2.5"/>
-            <circle cx="36" cy="52" r="5" fill="#ffb800"/><circle cx="62" cy="58" r="5" fill="#fff"/><circle cx="90" cy="60" r="5.5" fill="#00ffa3"/><circle cx="118" cy="58" r="5" fill="#fff"/><circle cx="144" cy="52" r="5" fill="#ffb800"/>
+            <ellipse cx="100" cy="70" rx="54" ry="15" fill="url(#aCore)"/>
+            <path d="M56 52 C56 16,144 16,144 52 Z" fill="url(#aD)" stroke="#7df9ff" stroke-width="1.8"/>
+            <ellipse cx="100" cy="54" rx="88" ry="21" fill="url(#aB)" stroke="#07101e" stroke-width="2.8"/>
+            <ellipse cx="100" cy="51" rx="74" ry="11" fill="none" stroke="#ffffff55" stroke-width="1"/>
+            <circle cx="38" cy="54" r="5" fill="#ffb800"/><circle cx="68" cy="61" r="5" fill="#fff"/><circle cx="100" cy="63" r="6" fill="#00ffa3"/><circle cx="132" cy="61" r="5" fill="#fff"/><circle cx="162" cy="54" r="5" fill="#ffb800"/>
           </svg>
         </div>
 
-        <!-- Cono de succión con objetos flotando y la canasta VALMEX abajo -->
-        <div class="tractor-cone">
-          <div class="tractor-rings" aria-hidden="true"></div>
-          <div class="loot-cloud" id="lootCloud"></div>
+        <!-- Escenario 3D interactivo: Canasta decorada + 8 regalos 3D adentro siendo succionados -->
+        <div class="basket-3d-stage" id="basket3dStage">
+          <svg class="basket-3d-svg" viewBox="0 0 600 430" aria-label="Canasta 3D interactiva de Operadora VALMEX">
+            <defs>
+              <linearGradient id="beamGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00ffa3" stop-opacity=".42"/>
+                <stop offset="45%" stop-color="#00d4ff" stop-opacity=".18"/>
+                <stop offset="85%" stop-color="#ff2a85" stop-opacity=".08"/>
+                <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="kraftSide" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1b2b48"/>
+                <stop offset="50%" stop-color="#101b30"/>
+                <stop offset="100%" stop-color="#09101f"/>
+              </linearGradient>
+              <linearGradient id="basketRim" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#00ffa3"/>
+                <stop offset="50%" stop-color="#00d4ff"/>
+                <stop offset="100%" stop-color="#ff2a85"/>
+              </linearGradient>
+              <linearGradient id="goldBox" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffe27a"/>
+                <stop offset="50%" stop-color="#ffb800"/>
+                <stop offset="100%" stop-color="#b87700"/>
+              </linearGradient>
+              <linearGradient id="pouchGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#d7a974"/>
+                <stop offset="100%" stop-color="#8c5e32"/>
+              </linearGradient>
+              <linearGradient id="chocoGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ff5e9e"/>
+                <stop offset="100%" stop-color="#7b1fa2"/>
+              </linearGradient>
+              <linearGradient id="coffeeGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#00d4ff"/>
+                <stop offset="100%" stop-color="#006699"/>
+              </linearGradient>
+              <pattern id="wireMesh" width="18" height="18" patternUnits="userSpaceOnUse">
+                <path d="M0 9 L9 0 L18 9 L9 18 Z" fill="none" stroke="#00ffa333" stroke-width="1.1"/>
+              </pattern>
+            </defs>
 
-          <div class="valmex-basket">
-            <div class="basket-mesh" aria-hidden="true"></div>
-            <div class="basket-badge">🧺 CANASTA OFICIAL · OPERADORA VALMEX</div>
-            <span class="basket-sub">✨ Gravita hacia el OVNI · Toca los objetos de arriba para inspirarte</span>
-          </div>
+            <!-- Haz de luz cónico abductor -->
+            <polygon class="b3d-beam" points="215,0 385,0 575,420 25,420" fill="url(#beamGrad)"/>
+
+            <!-- Anillos de energía ascendentes -->
+            <ellipse class="b3d-ring r1" cx="300" cy="280" rx="210" ry="34" fill="none" stroke="#00ffa388" stroke-width="2" stroke-dasharray="10 8"/>
+            <ellipse class="b3d-ring r2" cx="300" cy="220" rx="175" ry="26" fill="none" stroke="#00d4ff88" stroke-width="2" stroke-dasharray="8 6"/>
+            <ellipse class="b3d-ring r3" cx="300" cy="155" rx="135" ry="20" fill="none" stroke="#ff2a8588" stroke-width="1.8" stroke-dasharray="6 6"/>
+
+            <!-- Partículas de succión -->
+            <circle cx="155" cy="120" r="3" fill="#00ffa3"/><circle cx="440" cy="105" r="2.5" fill="#00d4ff"/>
+            <circle cx="235" cy="70" r="2.5" fill="#ffb800"/><circle cx="365" cy="82" r="3" fill="#ff2a85"/>
+
+            <!-- GRUPO 3D DE LA CANASTA Y SUS REGALOS -->
+            <g class="b3d-basket-all">
+              <!-- Sombra inferior de levitación -->
+              <ellipse cx="300" cy="408" rx="185" ry="18" fill="#00ffa322"/>
+
+              <!-- Fondo interior de la canasta + Papel china decorativo (picos neón y oscuros) -->
+              <ellipse cx="300" cy="262" rx="196" ry="38" fill="#070c18" stroke="#1e3358" stroke-width="2"/>
+              <polygon points="108,262 135,212 172,254 205,204 248,250 300,198 352,250 395,204 428,254 465,212 492,262" fill="#10253a" stroke="#00ffa366" stroke-width="1.5"/>
+              <polygon points="124,264 158,222 196,256 244,214 300,254 356,214 404,256 442,222 476,264" fill="#163749" stroke="#00d4ff66" stroke-width="1.2"/>
+
+              <!-- ================= FILA TRASERA DE REGALOS 3D (Levitan saliendo de la canasta) ================= -->
+
+              <!-- [2] Bolsita Kraft Gourmet de Pistaches y Nueces (Izquierda-Atrás) -->
+              <g class="b3d-item" data-idx="2" style="--d:0.2s">
+                <path d="M145,250 L153,125 L235,132 L228,255 Z" fill="url(#pouchGrad)" stroke="#ffe0b2" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M153,125 L162,113 L242,120 L235,132 Z" fill="#b68653" stroke="#ffe0b2" stroke-width="1.4"/>
+                <!-- Ventanita transparente con pistaches/almendras -->
+                <rect x="160" y="160" width="58" height="46" rx="8" fill="#2a1a0e" stroke="#ffd54f" stroke-width="1.5"/>
+                <ellipse cx="175" cy="176" rx="7" ry="4.5" fill="#9ccc65" transform="rotate(-20 175 176)"/>
+                <ellipse cx="192" cy="174" rx="7" ry="4.5" fill="#d4e157" transform="rotate(15 192 174)"/>
+                <ellipse cx="204" cy="186" rx="7" ry="4.5" fill="#8bc34a" transform="rotate(-10 204 186)"/>
+                <ellipse cx="182" cy="192" rx="7.5" ry="4.5" fill="#ffb74d" transform="rotate(25 182 192)"/>
+                <ellipse cx="198" cy="196" rx="6.5" ry="4" fill="#aed581"/>
+                <!-- Etiqueta Kraft -->
+                <rect x="157" y="136" width="64" height="17" rx="4" fill="#0b1324" stroke="#00ffa3" stroke-width="1"/>
+                <text x="189" y="148" text-anchor="middle" class="b3d-badge" fill="#00ffa3">🥜 PISTACHES</text>
+              </g>
+
+              <!-- [4] Bolsa/Lata Cilíndrica 3D de Café & Té Gourmet (Centro-Atrás, flotando alto hacia el OVNI) -->
+              <g class="b3d-item" data-idx="4" style="--d:0.55s">
+                <path d="M256,102 L344,102 L344,232 C344,244 256,244 256,232 Z" fill="url(#coffeeGrad)" stroke="#80e5ff" stroke-width="1.8"/>
+                <ellipse cx="300" cy="102" rx="44" ry="12" fill="#4dd2ff" stroke="#ffffff" stroke-width="1.5"/>
+                <ellipse cx="300" cy="102" rx="32" ry="7" fill="#0b182e"/>
+                <!-- Franja dorada de marca de café -->
+                <rect x="258" y="136" width="84" height="50" rx="6" fill="#081224" stroke="#ffb800" stroke-width="1.5"/>
+                <text x="300" y="156" text-anchor="middle" font-size="18">☕</text>
+                <text x="300" y="175" text-anchor="middle" class="b3d-badge" fill="#ffb800">CAFÉ &amp; TÉ</text>
+              </g>
+
+              <!-- [7] Tarjeta Negra Personalizada con OVNI Neón (Derecha-Atrás, siendo succionada) -->
+              <g class="b3d-item" data-idx="7" style="--d:0.9s">
+                <g transform="rotate(8 415 170)">
+                  <rect x="366" y="108" width="96" height="126" rx="10" fill="#091120" stroke="#00ffa3" stroke-width="2"/>
+                  <rect x="373" y="115" width="82" height="112" rx="7" fill="none" stroke="#00d4ff55" stroke-width="1" stroke-dasharray="4 3"/>
+                  <ellipse cx="414" cy="144" rx="22" ry="6" fill="#00ffa3"/>
+                  <path d="M402 142 C402 132,426 132,426 142 Z" fill="#7df9ff"/>
+                  <polygon points="402,148 426,148 436,178 392,178" fill="#00ffa333"/>
+                  <text x="414" y="190" text-anchor="middle" class="b3d-badge" fill="#00ffa3">PARA: TI</text>
+                  <text x="414" y="206" text-anchor="middle" font-size="9" fill="#96a7c8" font-family="Space Grotesk" font-weight="700">🎟️ TARJETA GUIÑO</text>
+                </g>
+              </g>
+
+              <!-- ================= FILA MEDIA DE REGALOS 3D ================= -->
+
+              <!-- [1] Frasco Transparente 3D de Gomitas Enchiladas con Tapa Roja (Izquierda) -->
+              <g class="b3d-item" data-idx="1" style="--d:1.15s">
+                <rect x="114" y="176" width="76" height="86" rx="14" fill="#2b0c18dd" stroke="#ff5c8d" stroke-width="1.8"/>
+                <ellipse cx="152" cy="176" rx="34" ry="8" fill="#ff2a55" stroke="#ffc2d1" stroke-width="1.5"/>
+                <rect x="120" y="166" width="64" height="11" rx="4" fill="#d90429" stroke="#ff8fa3" stroke-width="1.2"/>
+                <!-- Gomitas enchiladas adentro -->
+                <circle cx="134" cy="204" r="9" fill="#ff4d00"/><circle cx="154" cy="200" r="8.5" fill="#ff9e00"/><circle cx="170" cy="208" r="8.5" fill="#ff0055"/>
+                <circle cx="138" cy="222" r="9" fill="#ff7b00"/><circle cx="158" cy="220" r="9.5" fill="#e63946"/><circle cx="172" cy="226" r="8" fill="#ffb703"/>
+                <rect x="119" y="226" width="66" height="19" rx="5" fill="#0a0f1d" stroke="#ff2a85" stroke-width="1"/>
+                <text x="152" y="239" text-anchor="middle" class="b3d-badge" fill="#ff85b8">🌶️ ENCHILADAS</text>
+              </g>
+
+              <!-- [0] Caja Transparente 3D de Chocolates Ferrero & Monedas Doradas (Centro) -->
+              <g class="b3d-item" data-idx="0" style="--d:0.35s">
+                <!-- Cubo acrílico 3D -->
+                <rect x="206" y="182" width="112" height="78" rx="10" fill="#23190acc" stroke="url(#goldBox)" stroke-width="2.4"/>
+                <path d="M206,188 L220,172 L330,172 L318,188 Z" fill="#ffe57f44" stroke="#ffd54f" stroke-width="1.5"/>
+                <!-- Esferas doradas de Ferrero adentro -->
+                <circle cx="232" cy="206" r="13" fill="url(#goldBox)" stroke="#fff3c4" stroke-width="1.2"/>
+                <circle cx="262" cy="206" r="13" fill="url(#goldBox)" stroke="#fff3c4" stroke-width="1.2"/>
+                <circle cx="292" cy="206" r="13" fill="url(#goldBox)" stroke="#fff3c4" stroke-width="1.2"/>
+                <circle cx="246" cy="228" r="13" fill="url(#goldBox)" stroke="#fff3c4" stroke-width="1.2"/>
+                <circle cx="278" cy="228" r="13" fill="url(#goldBox)" stroke="#fff3c4" stroke-width="1.2"/>
+                <!-- Listón y etiqueta dorada -->
+                <rect x="218" y="234" width="88" height="19" rx="5" fill="#09101d" stroke="#ffb800" stroke-width="1.2"/>
+                <text x="262" y="247" text-anchor="middle" class="b3d-badge" fill="#ffd54f">🍫 CHOCOLATES</text>
+              </g>
+
+              <!-- [3] Vela Aromática 3D en Frasco de Vidrio con Flama y Etiqueta "Anti-Estrés" (Derecha-Centro) -->
+              <g class="b3d-item" data-idx="3" style="--d:0.75s">
+                <rect x="330" y="182" width="74" height="82" rx="12" fill="#1b2838dd" stroke="#a8dadc" stroke-width="1.8"/>
+                <rect x="335" y="198" width="64" height="60" rx="8" fill="#f4f1de" opacity=".92"/>
+                <ellipse cx="367" cy="198" rx="32" ry="7" fill="#fffdf7"/>
+                <!-- Pabilo y flama cálida -->
+                <line x1="367" y1="196" x2="367" y2="188" stroke="#222" stroke-width="2"/>
+                <path d="M367,168 C374,177 375,186 367,189 C359,186 360,177 367,168 Z" fill="#ffb800"/>
+                <path d="M367,174 C371,179 371,185 367,187 C363,185 363,179 367,174 Z" fill="#ffffff"/>
+                <!-- Etiqueta de mecate en el frasco -->
+                <rect x="336" y="218" width="62" height="26" rx="5" fill="#0b1324" stroke="#00ffa3" stroke-width="1.2"/>
+                <text x="367" y="230" text-anchor="middle" font-size="8.5" fill="#ffb800" font-family="Space Grotesk" font-weight="700">🕯️ VELA</text>
+                <text x="367" y="240" text-anchor="middle" font-size="8" fill="#00ffa3" font-family="Space Grotesk" font-weight="700">ANTI-ESTRÉS</text>
+              </g>
+
+              <!-- [6] Macetita 3D con Mini Suculenta (Extremo Derecho) -->
+              <g class="b3d-item" data-idx="6" style="--d:1.35s">
+                <!-- Hojas carnosas de suculenta -->
+                <ellipse cx="448" cy="196" rx="12" ry="20" fill="#00c896" stroke="#a8ffdb" stroke-width="1.2"/>
+                <ellipse cx="433" cy="202" rx="12" ry="18" fill="#00a878" stroke="#7df9ff" stroke-width="1.2" transform="rotate(-28 433 202)"/>
+                <ellipse cx="463" cy="202" rx="12" ry="18" fill="#00a878" stroke="#7df9ff" stroke-width="1.2" transform="rotate(28 463 202)"/>
+                <ellipse cx="424" cy="212" rx="11" ry="15" fill="#00ffa3" transform="rotate(-52 424 212)"/>
+                <ellipse cx="472" cy="212" rx="11" ry="15" fill="#00ffa3" transform="rotate(52 472 212)"/>
+                <!-- Maceta geométrica -->
+                <polygon points="416,214 480,214 470,264 426,264" fill="#e07a5f" stroke="#ffd6ba" stroke-width="1.6"/>
+                <rect x="413" y="210" width="70" height="8" rx="3" fill="#f28482"/>
+                <rect x="416" y="236" width="64" height="18" rx="5" fill="#09101d" stroke="#00ffa3" stroke-width="1"/>
+                <text x="448" y="248" text-anchor="middle" class="b3d-badge" fill="#00ffa3">🌱 SUCULENTA</text>
+              </g>
+
+              <!-- [5] Rollo/Par de Calcetines Cool con Diseño Espacial (Frente-Izquierda, asomándose en el borde) -->
+              <g class="b3d-item" data-idx="5" style="--d:0.45s">
+                <g transform="rotate(-10 192 246)">
+                  <path d="M166,204 L196,204 L196,246 L216,246 C224,246 224,266 214,266 L166,266 Z" fill="url(#chocoGrad)" stroke="#ffffff" stroke-width="1.6"/>
+                  <rect x="166" y="204" width="30" height="10" rx="3" fill="#00ffa3"/>
+                  <circle cx="181" cy="226" r="3.5" fill="#ffb800"/><circle cx="175" cy="240" r="3" fill="#00d4ff"/><circle cx="192" cy="252" r="3.5" fill="#00ffa3"/>
+                  <rect x="155" y="246" width="74" height="18" rx="5" fill="#09101d" stroke="#ff2a85" stroke-width="1.2"/>
+                  <text x="192" y="258" text-anchor="middle" class="b3d-badge" fill="#ff85b8">🧦 CALCETINES</text>
+                </g>
+              </g>
+
+              <!-- ================= CUERPO FRONTAL 3D DE LA CANASTA DECORADA VALMEX ================= -->
+              <!-- Cuerpo trapezoidal de rejilla metálica negra y bordes neón -->
+              <path d="M98,262 L502,262 L462,382 C456,396 440,402 422,402 L178,402 C160,402 144,396 138,382 Z" fill="url(#kraftSide)" stroke="#00ffa3" stroke-width="2.6"/>
+              <path d="M98,262 L502,262 L462,382 C456,396 440,402 422,402 L178,402 C160,402 144,396 138,382 Z" fill="url(#wireMesh)"/>
+
+              <!-- Aro superior 3D de la canasta + Asas laterales -->
+              <path d="M84,256 C70,256 68,284 92,286 L108,286" fill="none" stroke="url(#basketRim)" stroke-width="6" stroke-linecap="round"/>
+              <path d="M516,256 C530,256 532,284 508,286 L492,286" fill="none" stroke="url(#basketRim)" stroke-width="6" stroke-linecap="round"/>
+              <rect x="92" y="254" width="416" height="14" rx="7" fill="url(#basketRim)"/>
+
+              <!-- Moño / Listón Verde Menta Neón al frente de la canasta -->
+              <path d="M294,261 L262,244 C248,238 244,264 260,268 L294,264 Z" fill="#00ffa3" stroke="#04120c" stroke-width="1.5"/>
+              <path d="M306,261 L338,244 C352,238 356,264 340,268 L306,264 Z" fill="#00ffa3" stroke="#04120c" stroke-width="1.5"/>
+              <path d="M294,264 L276,298 L290,295 L298,266 Z" fill="#00d4ff"/>
+              <path d="M306,264 L324,298 L310,295 L302,266 Z" fill="#00d4ff"/>
+              <circle cx="300" cy="262" r="9" fill="#ffffff" stroke="#04120c" stroke-width="2"/>
+
+              <!-- Placa Frontal Oficial de Operadora VALMEX en la canasta -->
+              <rect x="170" y="302" width="260" height="68" rx="16" fill="#060b16f2" stroke="#00ffa3" stroke-width="2"/>
+              <rect x="176" y="308" width="248" height="56" rx="12" fill="none" stroke="#00d4ff44" stroke-width="1"/>
+              <text x="300" y="330" text-anchor="middle" font-family="Syne,sans-serif" font-weight="800" font-size="14" fill="#00ffa3" letter-spacing="1.5">🛸 OPERADORA VALMEX</text>
+              <text x="300" y="351" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="11.5" fill="#e6f0ff">CANASTA PERSONALIZADA · $300–$400</text>
+            </g>
+          </svg>
         </div>
+
+        <!-- Botones rápidos sincronizados por si alguien prefiere tocar la lista debajo de la canasta -->
+        <div class="loot-pills" id="lootPills"></div>
       </div>
 
-      <!-- Mensaje positivo/divertido al hacer clic en un objeto -->
+      <!-- Mensaje positivo/divertido al hacer clic en un regalo de la canasta -->
       <div class="loot-msg-box" id="lootMsgBox" aria-live="polite">
-        <div class="loot-msg-head" id="lootMsgTitle">👆 Toca cualquier objeto abducido de la canasta</div>
-        <p class="loot-msg-txt" id="lootMsgTxt">Cada detalle cuenta: desde sus chocolates o gomitas favoritas hasta algo divertido para su escritorio en la Operadora.</p>
-        <span class="loot-msg-sub" id="lootMsgSub">🛸 Rayo abductor activo · Presupuesto sugerido: $300 – $400 MXN</span>
+        <div class="loot-msg-head" id="lootMsgTitle">👆 Toca cualquier regalo dentro de la canasta 3D</div>
+        <p class="loot-msg-txt" id="lootMsgTxt">Cada objeto en la canasta tiene vida propia: hazle clic a los chocolates, gomitas, pistaches, vela, café, calcetines, suculenta o tarjeta para ver su mensaje.</p>
+        <span class="loot-msg-sub" id="lootMsgSub">🛸 Rayo abductor activo · Presupuesto: $300 – $400 MXN</span>
       </div>
     </div>
   </div>
@@ -431,24 +627,38 @@ footer{padding:34px 0 calc(52px + env(safe-area-inset-bottom,0px));text-align:ce
     ["🌱","Mini Suculenta","Vida al escritorio","Una compañera verde indestructible que sobrevive a cualquier trimestre y alegra el lugar de trabajo.","Oxígeno extra para grandes ideas"],
     ["🎟️","Tarjeta con Guiño","El toque estrella","Una nota con su frase típica, un chiste interno amable o un buen deseo para cerrar el 2026 con una sonrisa.","Valor sentimental: incalculable"]
   ];
-  LOOT.forEach(function(item,idx){
-    var btnEl=document.createElement("button");
-    btnEl.type="button";
-    btnEl.className="loot-item";
-    btnEl.style.setProperty("--d",(idx*0.28).toFixed(2)+"s");
-    btnEl.innerHTML='<span class="loot-ico">'+item[0]+'</span><span class="loot-lbl">'+item[1]+'</span><span class="loot-tag">'+item[2]+"</span>";
-    btnEl.addEventListener("click",function(){
-      document.querySelectorAll(".loot-item").forEach(function(el){el.classList.remove("active","beam-shot");});
-      void btnEl.offsetWidth;
-      btnEl.classList.add("active","beam-shot");
-      $("lootMsgTitle").textContent=item[0]+" "+item[1]+" · "+item[2];
-      $("lootMsgTxt").textContent=item[3];
-      $("lootMsgSub").textContent="✨ "+item[4];
-      var mb=$("lootMsgBox");mb.classList.remove("pop");void mb.offsetWidth;mb.classList.add("pop");
-      beep(740,.08);setTimeout(function(){beep(980,.14);},90);
+  function selectLoot(idx){
+    var item=LOOT[idx];if(!item)return;
+    document.querySelectorAll(".b3d-item").forEach(function(el){
+      el.classList.remove("active","suck");
+      if(Number(el.getAttribute("data-idx"))===idx){void el.offsetWidth;el.classList.add("active","suck");}
     });
-    $("lootCloud").appendChild(btnEl);
+    document.querySelectorAll(".loot-pill").forEach(function(el,i){el.classList.toggle("active",i===idx);});
+    $("lootMsgTitle").textContent=item[0]+" "+item[1]+" · "+item[2];
+    $("lootMsgTxt").textContent=item[3];
+    $("lootMsgSub").textContent="✨ "+item[4];
+    var mb=$("lootMsgBox");mb.classList.remove("pop");void mb.offsetWidth;mb.classList.add("pop");
+    beep(740,.08);setTimeout(function(){beep(980,.14);},90);
+  }
+  document.querySelectorAll(".b3d-item").forEach(function(el){
+    el.addEventListener("click",function(){selectLoot(Number(el.getAttribute("data-idx")));});
   });
+  LOOT.forEach(function(item,idx){
+    var p=document.createElement("button");
+    p.type="button";p.className="loot-pill";
+    p.textContent=item[0]+" "+item[1];
+    p.addEventListener("click",function(){selectLoot(idx);});
+    $("lootPills").appendChild(p);
+  });
+  /* Efecto 3D parallax suave al mover el cursor sobre la canasta */
+  var stg=$("basket3dStage"),ac=$("abductCard");
+  if(stg&&ac){
+    ac.addEventListener("mousemove",function(e){
+      var r=ac.getBoundingClientRect(),x=((e.clientX-r.left)/r.width-.5)*10,y=((e.clientY-r.top)/r.height-.5)*-8;
+      stg.style.transform="rotateY("+x.toFixed(2)+"deg) rotateX("+y.toFixed(2)+"deg)";
+    });
+    ac.addEventListener("mouseleave",function(){stg.style.transform="rotateY(0deg) rotateX(0deg)";});
+  }
   [["X-02","🛸","Anomalía en Acercamiento",'Coordenadas bloqueadas. Una <span class="redact">dinámica sorpresa</span> pondrá a prueba a toda la tripulación durante el aterrizaje.'],["X-03","🔮","Protocolo Confidencial",'Acceso restringido hasta nuevo aviso. Solo sabemos que habrá <span class="redact">momentos épicos</span> y <span class="redact">sorpresas clasificadas</span>.'],["X-04","🌌","Transmisión Final",'Señal encriptada desde <span class="redact">Taquería Ovnis</span>. Prepárate para una tarde fuera de este planeta para cerrar el 2026.']].forEach(function(x){$("teasersBox").insertAdjacentHTML("beforeend",'<div class="teaser" onclick="this.classList.toggle(\'peek\')"><span class="teaser-lock">🔒 Expediente '+x[0]+'</span><div class="teaser-ico">'+x[1]+"</div><h3>"+x[2]+"</h3><p>"+x[3]+'</p><span class="teaser-hint">👆 Pasa el cursor o toca para desencriptar pista</span></div>');});
   $("pie").innerHTML="🛸 Operadora VALMEX · "+CFG.fecha+" · "+CFG.hora+" · "+CFG.lugar;
   $("cdSub").textContent=CFG.fecha+" · "+CFG.hora;
