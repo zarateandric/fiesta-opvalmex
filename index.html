@@ -100,8 +100,9 @@ nav a.pill:hover{transform:translateY(-2px);box-shadow:0 0 32px #00ffa399;color:
 .abduct-scene{position:relative;max-width:680px;margin:18px auto 0;padding:10px 0 6px;display:flex;flex-direction:column;align-items:center}
 .abduct-ufo{width:190px;position:relative;z-index:5;animation:ufoHover 3.2s ease-in-out infinite!important;filter:drop-shadow(0 12px 28px #00ffa366)}
 @keyframes ufoHover{50%{transform:translateY(-10px) rotate(-1.5deg)}}
-.tractor-cone{position:relative;width:100%;max-width:620px;margin-top:-18px;padding:44px 18px 26px;background:linear-gradient(180deg,rgba(0,255,163,.32) 0%,rgba(0,212,255,.14) 48%,rgba(255,42,133,.06) 85%,transparent 100%);clip-path:polygon(33% 0%,67% 0%,100% 100%,0% 100%);display:flex;flex-direction:column;align-items:center;z-index:2}
-.tractor-rings{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(180deg,transparent 0 22px,rgba(0,255,163,.16) 22px 25px);animation:beamUp 1.8s linear infinite!important}
+.tractor-cone{position:relative;width:100%;max-width:640px;margin-top:-18px;padding:44px 18px 26px;display:flex;flex-direction:column;align-items:center;z-index:2}
+.tractor-cone::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(0,255,163,.34) 0%,rgba(0,212,255,.15) 52%,rgba(255,42,133,.06) 86%,transparent 100%);clip-path:polygon(30% 0%,70% 0%,100% 100%,0% 100%)}
+.tractor-rings{position:absolute;inset:0;pointer-events:none;z-index:1;clip-path:polygon(30% 0%,70% 0%,100% 100%,0% 100%);background:repeating-linear-gradient(180deg,transparent 0 22px,rgba(0,255,163,.18) 22px 25px);animation:beamUp 1.8s linear infinite!important}
 @keyframes beamUp{0%{background-position:0 50px}100%{background-position:0 0}}
 .loot-cloud{position:relative;z-index:4;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:100%;max-width:560px;margin:6px auto 14px}
 .loot-item{position:relative;background:linear-gradient(145deg,rgba(19,31,56,.94),rgba(10,16,30,.96));border:1.5px solid #2b4570;border-radius:18px;padding:12px 8px 10px;color:var(--text);font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;box-shadow:0 10px 25px #0009,0 0 18px #00ffa31a;animation:suctionFloat 3.4s ease-in-out infinite!important;animation-delay:var(--d,0s);transition:border-color .2s,box-shadow .2s,background .2s}
@@ -209,7 +210,8 @@ footer{padding:34px 0 calc(52px + env(safe-area-inset-bottom,0px));text-align:ce
   .cd div{padding:11px 2px;border-radius:12px}
   .steps,.teasers{grid-template-columns:1fr;gap:14px}
   .roulette,.classified-box,.abduct-card{padding:28px 14px;border-radius:22px}
-  .tractor-cone{clip-path:polygon(18% 0%,82% 0%,100% 100%,0% 100%);padding:34px 10px 22px}
+  .tractor-cone{padding:34px 10px 22px}
+  .tractor-cone::before,.tractor-rings{clip-path:polygon(20% 0%,80% 0%,100% 100%,0% 100%)}
   .loot-cloud{grid-template-columns:repeat(2,1fr);gap:10px}
   .picker{flex-direction:column;width:100%}
   .code-box{width:100%;max-width:340px;justify-content:space-between}
